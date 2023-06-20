@@ -1,0 +1,415 @@
+=====================================================python=============================================================================
+
+1.Tell me about Python?
+	dynamic, high-level, and interpretedprogramming language
+	Python language is being used by almost all tech-giant companies like – Google, Amazon, Facebook, Instagram, Dropbox, Uber… etc.
+	Emphasis on code readability, shorter codes, ease of writing
+	The biggest strength of Python is huge collection of standard libraries which can be used for the following:
+		•	Web frameworks like Django**, Flask**, FAST API*, Pyramid, Bottle (used by YouTube, Instagram, Dropbox)
+		•	Machine Learning
+		•	GUI Applications (like Kivy, Tkinter, PyQt etc., )
+		•	Image processing (like OpenCV, Pillow)
+		•	Web scraping (like Scrapy, BeautifulSoup, Selenium)
+		•	Test frameworks
+		•	Multimedia
+		•	Scientific computing
+		•	Text processing and many more
+
+2. Why Python is so popular now a days?
+	•Emphasis on code readability, shorter codes, ease of writing
+	•Programmers can express logical concepts in fewer lines of code in comparison to languages such as C++ or Java.
+	•Python supports multiple programming paradigms, like object-oriented, imperative and functional programming or procedural.
+	•There exist inbuilt functions for almost all of the frequently used concepts.
+	
+	
+3. Features of Python?
+	a. Interpreted**:.C .obj .exe         .java  .class .war/.ear       .py
+		>	There are no separate compilation and execution steps like C and C++, Java
+		>	Directly run the program from the source code.
+		>	Internally, Python converts the source code into an intermediate form called bytecodes then translated into native language of specific computer to run it.
+		>	No need to worry about linking and loading with libraries, etc.
+		
+	b.Platform Independent:
+		>	Python programs can be developed and executed on multiple operating system platforms.
+		>	Python can be used on Linux, Windows, Macintosh, Solaris and many more.
+
+	C. Free and Open Source: Redistributable
+	
+	d.High-level Language:
+		In Python, no need to take care about low-level details such as managing the memory used by the program.
+
+	e. Simple:
+		•	Closer to learning Mathematics basics in English medium. Easy to Learn
+		•	More emphasis on the solution to the problem rather than the syntax
+
+	f. Embeddable
+		•	Python can be used within C/C++ program to give scripting capabilities for the program’s users.
+
+	g. Robust:
+		•	Exceptional handling features
+		•	Memory management techniques in built
+
+	h. Rich Library Support
+		•	The Python Standard Library is very vast.
+		•	Known as the “batteries included” philosophy of Python. It can help do various things involving regular expressions, documentation generation, unit testing, threading, databases, web browsers, CGI, email, XML, HTML, WAV files, cryptography, GUI and many more.
+
+	i. Easy-to-learn − Python has few keywords, simple structure, and a clearly defined syntax. This allows the student to pick up the language quickly.
+
+	j. Easy-to-read − Python code is more clearly defined and visible to the eyes.
+
+	k. Easy-to-maintain − Python's source code is fairly easy-to-maintained
+
+	l. Databases − Python provides interfaces to all major commercial databases.
+	
+
+4. Advantages and Disadvantages of Python?
+	advantages:
+		   easy to used
+		   open source land
+		   syntax is easy
+		   variable declaration not req
+  
+	Disadvantage:
+           slow speed (due to high mem usage)
+		   heavy memory usage
+		   week in mob computing
+		   
+5. Interpreted vs Compiled time programming languages. Explain in detail
+	=====>>>>>Compiler: •A compiler translates the entire source code in a single run.
+                      •Compiled language follows at least two levels to get from source code to execution.
+                      •A compiled language is converted into machine code so that the processor can execute it.
+                      •The compiled programs run faster than interpreted programs.
+                      •Compiler delivers better performance.
+
+	=====>>>>>Interpreter: •An interpreter translates the entire source code line by line.
+                          •An interpreted language is a language in which the implementations execute instructions 
+                          directly without earlier compiling a program into machine language.
+                          •The interpreted programs run slower than the compiled program
+                          •This language delivers slower performance.
+				
+
+6. .py vs .pyc files?
+		.py: It is a standard file extension for python source code files.
+			 Python code is written in .py extension.
+			 Python compliles the .py files and save it as .pyc file
+			 
+		.pyc: The .pyc contain the compiled bytecode of Python source files
+			  pyc is created only for imported modules source.
+			  The .pyc file contains encoded python bytecode.
+		
+	
+7. How compilation will happen internally. Explain in detail?
+		-from the source to execute code,there are mainly three functions internally:-
+		1.python reads a source code,it verifies structure is well formatted,checks error in every cell.
+		2.find no error,compiler  translate into 'bytecode'
+		3.Then bytecode is send to virtual machine(python interpreter),which convert bytecode to machine executable language.
+		  then got the output with no error. 
+
+
+                              source codes
+							      |||
+						     c python compiler
+							      |||
+							 c python bytecode
+							      |||
+							 c virtual machine   -------input
+							        |
+									|
+									|
+								execute code
+								
+								
+								
+8. Why Python is Dynamically typed programming Language. Explain
+
+1.Python don't have any problem even if we don't declare the type of variable. 
+2.It states the kind of variable in the runtime of the program. 
+3.Python also take cares of the memory management which is crucial in programming
+
+
+9. Python is Platform independent.Explain
+   1. Python programs are platform independent because they can be run on different platforms 
+   using an interpreter built specifically for that platform.
+   2.Platform-independent software can be used in many different environments.
+   
+   
+10.Different ways to write python program.  
+
+Python is a versatile programming language that allows you to write programs in different styles and paradigms. Here are some of the common ways to write Python programs:
+
+Procedural Programming: In procedural programming, you organize your code into reusable procedures or functions. It focuses on step-by-step instructions and the flow of data between functions. Here's an example:
+Object-Oriented Programming (OOP): Python supports object-oriented programming, where you define classes to encapsulate data and behavior. It emphasizes the concepts of objects, inheritance, and polymorphism. Here's an example:
+Functional Programming: Functional programming promotes the use of pure functions and avoids mutable state and side effects. It focuses on the evaluation of expressions and function composition. Here's an example:
+Scripting: Python is often used for writing scripts that automate tasks or perform specific actions. These scripts are typically executed from the command line or as scheduled jobs. Here's a simple script:
+Module Development: Python allows you to create reusable modules or packages that can be imported and used in other programs. This approach promotes code modularity and reusability. Here's an example of a module:
+
+These are just a few ways to write Python programs, and often you'll find combinations of these styles in real-world projects. The choice of programming style depends on the requirements, complexity, and maintainability of your code.
+
+
+11.sourcecode vs bytecode	
+	Source code: Source code refers to the human-readable form of a program written in a programming language
+	like Python, Java, C++, etc. It consists of statements and instructions written in a specific syntax
+	that is understandable to programmers. The source code is written using high-level programming 
+	constructs and is meant to be easily readable and writable by humans. 
+	It typically has a file extension like .py (for Python), .java (for Java), or .cpp (for C++).
+
+	Bytecode: Bytecode, on the other hand, is a lower-level representation of the program 
+	that is generated by a compiler or an interpreter. It is an intermediate form of the program 
+	that is closer to the machine code understood by the computer's processor. 
+	Bytecode is usually not directly executed by the hardware but requires a bytecode interpreter or 
+	a virtual machine to execute it.
+
+12.Register instruction set
+	In Python, you can create a register instruction set by using dictionaries or classes. 
+	
+13. High Level vs Low level programming Language?
+	High level :==> These are portable from any one device to another.
+				==> These are very easy to execute.
+				==>High-level languages require the use of a compiler or an interpreter 
+				 for their translation into the machine code.
+				==>These languages have a very low memory efficiency. It means that they 
+				consume more memory than any low-level language.
+				==>High-level languages have a simple and comprehensive maintenance technique.
+
+	Low level:	==>A user cannot port these from one device to another.
+				==>These are very difficult to execute.
+				==>Low-level language requires an assembler for directly translating the 
+				instructions of the machine language.
+				==>These languages have a very high memory efficiency. It means that they 
+				consume less energy as compared to any high-level language.
+				==>It is quite complex to maintain any low-level language.
+				
+
+14.Python architecture:
+	Python's architecture can be divided into several key components:
+		Interpreter: Python uses an interpreter-based execution model. 
+					 The Python interpreter reads and executes Python code line by line, 
+					 rather than first compiling it into machine code like in a compiled language. 
+					 This allows for dynamic and interactive development.
+		
+		Syntax and Execution: Python has a clean and easy-to-read syntax, which contributes to its readability.
+							  The Python interpreter executes Python code sequentially.
+		
+		Standard Library: Python comes with a comprehensive standard library that provides a 
+						  wide range of modules and packages for various tasks.
+						  Eg:networking, web development, regular expressions, data serialization
+						  
+		Memory Management: Python has an automatic memory management system known as garbage collection. 
+		
+		Global Interpreter Lock (GIL): Python has a feature called the Global Interpreter Lock (GIL), 
+									   which is a mechanism used to synchronize thread execution in the 
+									   interpreter
+		
+		Dynamic Typing: Python is dynamically typed, meaning that variable types are determined at runtime.
+		
+		Extensibility: Python can be extended with modules written in other languages, such as C or C++
+		
+		
+15.Explain Garbage Collection mechanism in detail.
+	Garbage collection is a memory management technique used in programming languages to automatically 
+	reclaim memory that is no longer needed by the program. In Python, garbage collection is performed 
+	by the Python interpreter's built-in garbage collector.
+	
+	cycle detection
+	
+	Python provides a module called "gc" that allows fine-tuning and control over the garbage collection process.
+	You can adjust parameters, manually trigger garbage collection, or disable it altogether in specific scenarios where manual memory management is required.
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						                                            		2. VARIABLE
+
+
+
+
+
+
+Variable Declaration and Assignment:
+
+In Python, you can declare a variable and assign a value to it in a single line. For example:
+
+                                          age = 25
+                                          name = "John Doe"
+
+--->   Variable Naming Rules:
+
+Variable names can contain letters (a-z, A-Z), digits (0-9), and underscores (_).
+The first character of a variable name cannot be a digit.
+Variable names are case-sensitive ("age" and "Age" are different variables).
+Python keywords (reserved words) cannot be used as variable names.
+
+--->  Variable Types:
+Python is dynamically typed, which means you don't need to explicitly declare the type of a variable. 
+The type is determined automatically based on the assigned value. Some common variable types include:
+
+                         Integer: age = 25
+                         Float: pi = 3.1415
+                         String: name = "John Doe"
+                         Boolean: is_active = True
+
+--->  Variable Reassignment:
+You can change the value of a variable by assigning a new value to it:
+
+
+				age = 25  # Initial value
+				age = 30  # Reassigned value
+
+--->  Variable Concatenation:
+If the variable is of type string, you can concatenate it with other strings using the + operator:
+
+
+					name = "John"
+					greeting = "Hello, " + name
+
+--->  Multiple Assignment:
+Python allows you to assign multiple variables in a single line:
+
+     					a, b, c = 1, 2, 3
+
+---> Variable Scope:
+The scope of a variable determines where it can be accessed within a program. In Python, variables have either local or global scope.
+
+			Local variables: Defined within a function and can only be accessed within that function.
+			Global variables: Defined outside any function and can be accessed throughout the program.
+
+
+---> Constants:
+Although Python doesn't have built-in constant types, it is a convention to use uppercase variable names to indicate constant values that should not be modified.
+
+
+---> variables rules :
+  <> the varible is case sesitive
+  <> the variables should not start with numbers and special characters 
+  <> the variable space is provide by the underscore _
+  <> the variable should not be any Keyword or Function name 
+  <> The variable name should have meaning should not use single char "x=10"
+  <> The variable follows PIP8 strattages 
+  
+  
+                                 id() -------------------------to memory allocation
+  
+>>> x=10           -----------Integer
+>>> id(x)          -----------id() is for the memory allocation
+140728081441864    -----------Allocated memory
+>>> x=(10,20,30)   -----------Tuple ()(paranthese brackets)
+>>> id(x)          
+2108691586496
+>>>string=("this is Akash")--- string(mentioned in("") double,('')single  qoutes)
+>>> id(string)
+1354535263856
+>>> x={10,0,30}    -----------set {} (in curly brackets)
+>>> id(x)
+2108691388608
+>>> x=[10, 20, 30] -----------list [] (in big brackets)
+>>> id(x)
+1354535257216
+>>> x= True        ----------- # Boolean (0,1) (True,False) ==> the first letter should be in the capital
+>>> id(x)
+140728145124200
+
+                                 type()  ------------------------to find which type of datatype we are using
+
+>>> x=(10,20,30) 
+>>> type(x)
+<class 'tuple'>
+>>> x={10,20,30}
+>>> type(x)
+<class 'set'>
+>>> x=[10,20,30]
+>>> type(x)
+<class 'list'>
+>>> string=("this is Akash")
+>>> type(string)
+<class 'str'>
+
+==================================================  Real time Senarios ================================================
+print ("=========================================")
+print("==Area of the semicircle==")
+# As the area of the circle is pi*r**2
+radius = float(input("Enter the radius of the circle:"))
+pi = 3.14
+Area = (.5 * (pi * (radius**2)))
+print("The Area of the semicircle:", Area)
+print("===========================================================")
+
+
+print("==Area of the Circle==")
+# Area of the circle
+radius = float(input("Enter the Radius of the Circle:"))
+pi = 3.14
+Area = (pi * (radius**2))
+print("Area of the Circle is:", Area)
+print("===========================================================")
+
+
+
+print("==Area of the Rectangle==")
+# Area of rectangle
+length = float(input("Enter the Length of the Rectangle:"))
+breadths = float(input("Enter the breaths of the Rectangle"))
+Area = (length * breadths)
+print("Area of the Rectangle:", Area)
+print("===========================================================")
+
+
+
+print("==Area of the Square==")
+# Area of square
+a = float(input("Enter the length of the Square: "))
+area = a**2
+print("Area of the Square is :", area)
+print("===========================================================")
+
+
+
+print("==Exponential of the number==")
+base = (float(input("Enter the Base of the Exponent :")))
+power = (float(input("Enter the power of the Exponent :")))
+Exponent = base ** power
+print("Exponent of the base", base, "to the power", power, "is :", Exponent)
+# Exponential of the number
+print("========================================================")
+
+
+
+
+# Arrange the number in min and max
+num1 = (int(input("Enter the first integer no:")))
+num2 = (int(input("Enter the Second integer no:")))
+num3 = (int(input("Enter the third integer no :")))
+minimum = (num1 * (num1 <= num2 and num1 <= num3)) + (num2 * (num2 <= num1 and num2 <= num3)) + (num3 * (num3 <= num1 and num3 <= num2))
+maximum = (num1 * (num1 >= num2 and num1 >= num3)) + (num2 * (num2 >= num1 and num2 >= num3)) + (num3 * (num3 >= num1 and num3 >= num2))
+middle = (num1+num2+num3)-(minimum+maximum)
+print("Arrange the number from min to max:",minimum, middle, maximum)
+print("===========================================================")
+
+
+
+
+
+
