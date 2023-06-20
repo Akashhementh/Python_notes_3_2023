@@ -1,0 +1,10 @@
+                        Python operators
+
+
+ Arithmatic operator : +  , - , *,  / , % , ** , //.
+ Assignment operator : = , += , &= , |= , ^= , >>= ,<<=
+ Comparison operator : ==, != ,> , < , >= , <=
+ Logical operator    : and , or, not
+ Identity operator   : is , is not
+ membership operator  : in , not in
+ Bitwise operators : and , or , xor ,not << >>
