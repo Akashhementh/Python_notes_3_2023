@@ -1,0 +1,91 @@
+                                                    V. DataTypes Intro:
+                                                      ====================
+1. Importance of DataTypes.
+			Data Representation: Data types define the specific format and representation of data in Python.
+			Data Validation and Integrity: Data types help ensure the validity and integrity of data in a program.
+			Operations and Functionality: Each data type in Python comes with a set of predefined operations and functionality that can be performed on it
+			Type Safety and Error Detection: Python is a dynamically typed language, meaning that variables can hold values of different data types over their lifetime.
+			
+2. Different data types, data structures available in Python
+
+3. int vs float
+					Integer (int):
+					Represents whole numbers without any decimal point.
+					Examples: 5, -10, 0.
+					Memory usage is typically smaller than floating-point numbers.
+					Supports integer-specific operations like floor division (//) and modulo (%).
+					Suitable for situations where precision to the decimal point is not required, such as counting, indexing, or representing discrete quantities.
+					
+					Floating-Point (float):
+					Represents numbers with decimal points or fractional parts.
+					Examples: 3.14, -2.5, 0.0.
+					Memory usage is typically larger than integers due to the additional storage needed for the decimal part.
+					Supports floating-point operations like addition, subtraction, multiplication, and division.
+					Suitable for situations where precision to the decimal point is required, such as mathematical calculations, measurements, or scientific computations.
+4. Boolean. give all scenarios
+					Boolean is a data type in Python that represents two possible values: True and False. 
+					It is primarily used for logical operations, conditions, and control flow in programming.
+					
+					fruits = ['apple', 'banana', 'orange']
+					print('banana' in fruits)  # Output: True
+					print('grape' in fruits)   # Output: False
+
+5. 0 vs null
+					0:
+					0 is an integer literal that represents the numeric value zero.
+					It is a non-null value and is considered a valid number.
+					It is used in mathematical calculations, comparisons, and as a default value for variables.
+								x = 0
+								y = 5 - 5
+								if x == 0:
+									print("x is zero")
+					None:
+					None is a special object in Python that represents the absence of a value or the lack of existence.
+					It is often used to indicate the absence of a return value from a function or the uninitialized state of a variable.
+					It is frequently used to initialize variables, as a placeholder, or to indicate that a value has not been assigned.
+					It is considered a null value in Python.
+					
+					x = None
+					result = some_function()
+					if result is None:
+						print("No result available")
+
+
+6. Explain each data type, data structure with real life examples.
+					Numeric Types:
+					int: Represents integers (whole numbers) like 5, -10, 0.
+					float: Represents floating-point numbers with decimal precision like 3.14, -2.5, 0.0.
+					complex: Represents complex numbers with real and imaginary parts like 2+3j, -1+2j.
+					bool: Represents Boolean values, either True or False. Used for logical operations and control flow.
+
+					str: Represents strings of characters enclosed in quotes. Used for text manipulation and string operations.
+					Sequence Types:
+					list: Represents ordered, mutable (changeable) sequences of elements. Elements can be of different data types.
+					tuple: Represents ordered, immutable (unchangeable) sequences of elements. Elements can be of different data types.
+					range: Represents sequences of numbers that follow a specific pattern.
+					Mapping Type:
+
+					dict: Represents key-value pairs where each value is associated with a unique key. Used for mapping and storing data.
+					Set Types:
+					set: Represents unordered collections of unique elements. Used for mathematical operations like union, intersection, etc.
+					frozenset: Represents immutable sets, similar to sets but cannot be modified
+					
+					
+7. CRUD Operations.Give examples for each 
+					CRUD stands for Create, Read, Update, and Delete. It is a set of fundamental operations used to manipulate data in various systems,
+					 such as databases. Here's a brief explanation of each operation:
+					 
+					Create: Create involves inserting new data into a system. In the context of a database, it means adding a new record or entry.
+					Read: Read involves retrieving existing data from a system. It allows you to fetch and view data from the system, typically based on specified criteria.
+					Update: Update involves modifying existing data in a system. It allows you to change the values of specific attributes or fields in the data
+					Delete: Delete involves removing existing data from a system. It allows you to eliminate records or entries that are no longer needed.
+8. Sequences. Types of sequences. Sequence operations
+9. Explain about below functions and give examples 
+	print() --->	 function is used to display output on the console or terminal
+	id()	--->	 function returns the unique identifier of an object in memory
+	type()	--->	 function is used to determine the data type of an object.
+	int()	--->	 function is used to convert a value into an integer.
+	float()	--->	 The float() function is used to convert a value into a floating-point number.
+	complex()-->	 function is used to create a complex number with a real and imaginary part. 
+	bool()	--->	 function is used to convert a value into a Boolean (True or False)
+	input()	--->	 function is used to get user input from the console or terminal
