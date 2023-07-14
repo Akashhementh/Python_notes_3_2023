@@ -1,0 +1,756 @@
+'''
+string Execution
+'''
+print("====================================Low Level program==============================================")
+'''
+print("-----------------------------Length of string------------------------------------------------------")
+string = "akash"
+Length = len(string)
+print("length:", Length)
+
+string = str(input("Enter the string Value :"))
+count = 0
+for i in string:
+    count = count + 1
+print(count)
+
+print("------------------------Count characters in string------------------------------------------------")
+
+string = str(input("Enter the string:"))
+count = 0
+for i in string:
+    count = count + 1
+    print(count)
+'''
+'''
+
+print("-------------------------------slice string---------------------------------------------------------")
+string = str(input("Enter the String:"))
+slicing = slice(3, 10)
+print(string[slicing])
+
+string = str(input("Enter the String:"))
+start = int(input("Enter the starting slice number"))
+end = int(input("Enter the ending slice number"))
+for i in range(start, end):
+    print(string[i], end=" ")
+
+'''
+'''
+print("------------------------------Length of longest string in python---------------------------------------")
+string = str(input("enter the length of the string"))
+string2 = len(string)
+print("length of the string:", string2)
+
+string = str(input("enter the length of the string"))
+count = 0
+for i in string:
+    count += 1
+print(count)
+'''
+'''
+print("---------------------first and end char swap------------------------------------------")
+string = str(input("Enter the string"))
+count = ""
+for i in range(1, len(string)-1):
+    count += string[i]
+#print(count)
+string1 = string[-1]+count+string[0]
+print(string1)
+
+string = str(input("Enter the string"))
+string1 = list(string)
+temp = string1[0]
+string1[0] = string1[-1]
+string1[-1] = temp
+string = string1
+print("".join(string))
+'''
+'''
+print("---------------------Remove odd index values ------------------------------------------")
+string = str(input("Enter the string :"))
+for i in range(0, len(string)):
+    if i % 2 == 0:
+        print(string[i])
+'''
+'''
+print("-----------------------------count the words in string -------------------------------")
+string = str(input("enter the string"))
+count = str(input("enter the value to be counted"))
+num = 0
+for i in string:
+    if i == count:
+        num += 1
+print(num)
+'''
+'''
+print("--------------------------Upper lower case of a string-----------------------------------")
+string = str(input("enter the string"))
+for i in string:
+    if i in string.upper():
+        print("uppercase :", "".join(i))
+    else:
+        print ("lowercase :", "".join(i))
+'''
+'''
+print("---------------------------------last part of string--------------------------------------")
+string = (input("Enter the string"))
+string1 = string.split()[-1]
+print(string1)
+
+string = (input("Enter the string"))
+last_part = " "
+for i in range(len(string)-1, -1, -1):
+    if string[i] == " ":
+        break
+    last_part = string[i] + last_part
+print(last_part)
+'''
+'''
+print("-----------------------  Convert a given string to all uppercase----------------------------")
+string = input("Enter the string")
+string1 = string.upper()
+print(string1)
+
+string = (input("Enter the string"))
+up_case = " "
+for i in string:
+    if "a" <= i <= "z":
+        up = chr(ord(i) - 32)
+        up_case += up
+    else:
+        up_case += i
+print(up_case)
+'''
+'''
+print("----------------------------program to remove a newline in Python------------------------------------")
+string = "Hello, World!\n"
+new_string = string.replace("\n", "")
+print(new_string)
+'''
+'''
+print("------------------program to check whether a string starts with specified characters----------------")
+string = "hello, world!"
+string1 = "hello"
+if string.startswith(string1):
+    print("true")
+else:
+    print("fail")
+
+
+string = "hello, world!"
+string1 = "hello"
+string2 = "true"
+for i in range(len(string1)):
+    if string1[i] != string[i]:
+        string2 = "false"
+        break
+print(string2)
+'''
+'''
+print("-------------------to set the indentation of the first line-----------------------------------")
+string = input("Enter the string")
+ind = '      '
+print(ind+string)
+'''
+'''
+print("-----------------to print the following floating numbers upto 2 decimal places----------------")
+number = 3.14159
+formatted_number = "{:.2f}".format(number)
+print(formatted_number)
+
+txt = float(input('enter a value:'))
+txt1 = str(txt)
+txt2 = ''
+count = 0
+for i in txt1:
+    txt2 += i
+    if count == 2:
+        break
+    elif i == '.' or count == 1 or count == 2:
+        count += 1
+print(txt2)
+'''
+'''
+print("----------------------------------to display a number with a comma separator---------------------------")
+number = 1234567
+formatted_number = "{:,}".format(number)
+print(formatted_number)
+
+
+number = int(input("Enter the number"))
+num = str(number)
+r_num = num[::-1]
+f_num = ""
+for i in range(len(r_num)):
+    f_num += r_num[i]
+    if (i+1) % 3 == 0 and (i+1) != len(r_num):
+        f_num += ","
+form_number = f_num[::-1]
+print(form_number)
+'''
+'''
+print("-------------------------formate a number with percentage-------------------------------------")
+number = 0.75
+formatted_number = "{:.2%}".format(number)
+print(formatted_number)
+
+number = 0.3456789
+number1 = number * 100
+num = str(number1)
+num1 = " "
+count = 0
+for i in num:
+    num1 += i
+    if count == 2:
+      break
+    if i == '.' or (count == 1) or (count == 2):
+        count += 1
+print(num1, "%")
+'''
+'''
+print("-------------to count occurrences of a substring in a string---------------------------")
+string = "Hello, hello, hello!"
+substring = "hello"
+
+count = 0
+substring_length = len(substring)
+string_length = len(string)
+
+for i in range(string_length - substring_length + 1):
+    if string[i:i + substring_length] == substring:
+        count += 1
+print(count)
+'''
+'''
+print("-----------------------------count repeated characters in a string-------------------------")
+string = input("Enter the string")
+string1 = input("enter the char to be counted")
+count = 0
+for i in string:
+    if i == string1:
+        count += 1
+print(count)
+'''
+'''
+print("-------------------print the index of the character in a string--------------------")
+string = input("enter the string")
+string1 = input("enter the char to which index to be known")
+for i in range(0, len(string)):
+    if string[i] == string1:
+        print(i)
+'''
+'''
+print("------------------------------convert a string in a list----------------------------")
+string = input("enter the string")
+string1 = list(string)
+print(string1)
+
+string = input("Enter the string")
+string1 = [ ]
+for i in string:
+    string1.append(i)
+print(string1)
+'''
+'''
+print("-----------------------swap comma and dot in a string-----------------------------------")
+string = input("Enter the string")
+string1 =" "
+for i in string:
+    if i != ',' and i != '.':
+        string1 += i
+    if i == ',' or i == '.':
+        string1 += '.'
+print(string1)
+'''
+'''
+print("--------------------count and display the vowels of a given text-----------------------")
+string = input("Enter the string")
+vowels = ('a', 'e', 'i', 'o', 'u')
+count = 0
+for i in string:
+    if i in vowels:
+        count += 1
+print("total number of vowels in string:", count)
+'''
+'''
+print("----------------------------remove spaces from a given string----------------------------")
+string = input("Enter the string")
+string1 = string.replace(" ","")
+print(string1)
+
+string = input("Enter the string")
+string1 = ''
+for i in string:
+    if i != ' ':
+        string1 += i
+print(string1)
+'''
+'''
+print("---------------------------move spaces to the front of a given string------------------------------")
+string = input("Enter the string")
+string1 = ''
+string2 = ''
+for i in string:
+    if i != ' ':
+        string1 += i
+    if i == ' ':
+        string2 += " "
+print("string with removed space and add it lead",string2+string1)
+'''
+'''
+print("-----------------------------capitalize first and last letters of each word of a given string----")
+string = input("Enter the string")
+string1 = string.split()
+string2 = [ ]
+for i in string1:
+    if len(i) > 1:
+        strong = i[0].upper() + i[1:-1] + i[-1].upper()
+    else:
+        strong = i.upper()
+    string2.append(strong)
+print(" ".join(string2))
+'''
+'''
+print("------------------remove leading zeros from an IP address----------------------------------")
+string = "196.474.003.838"
+string1 = string.split('.')
+zeros = [str(int(i)) for i in string1]
+print(zeros)
+'''
+print("--------------------------------Medium level program-------------------------------------------")
+
+'''
+print("-------------------------------Replace first occurance character------------------------------")
+string = "hello this is akash"
+new_string = "hi"
+temp = ""
+string1 = string.split()
+for i in string1:
+    if i == string1[0]:
+        temp = string1[0]
+        string1[0] = new_string
+print(" ".join(string1))
+'''
+'''
+print("------------------swapping characters of the string-------------------------------------")
+string = input("enter the string")
+string1 = list(string)
+temp = ""
+temp = string1[0]
+string1[0] = string1[-1]
+string1[-1] = temp
+print(string1)
+'''
+'''
+print("-----------------------------Append chars to string at end----------------------------")
+txt = (input("Enter the string"))
+string = txt.split()
+string1 = (input("Enter the word to be added"))
+string3 = ""
+for i in string:
+    string3 += i + ' '
+    if i == string[-1]:
+        string3 += string1
+print(string3)
+'''
+'''
+print("-----------------------------check if a string contains all letters of the alphabet-----------------------------")
+str1 = input("Enter the string")
+str2 = "abcdefghijklmnopqrstuvwxyz"
+count = 0
+for i in str2:
+    if i in str1:
+        count += 1
+if count == 26:
+    print("String contains all the alphabets")
+else:
+    print("String does not contain all the alphabets")
+'''
+'''
+print("-----------------------------Substring replacement----------------------------------")
+number = input("Enter the string")
+string = number.split( )
+string1 = input("enter the substring to be replaced")
+string2 = input("enter the substring to be replaced with")
+num = " "
+for i in string:
+    if i != string1:
+        num += i + " "
+    if i == string1:
+        i = string2
+        num += i + " "
+print(num)
+'''
+'''
+print("---------------------------nth index character from string-------------------------------------")
+string = input("Enter the string")
+print(string[-1])
+'''
+'''
+print("---------------------------------4 Copies of last 2 chars--------------------------------------")
+string = input("Enter the string")
+if len(string) > 2:
+    num = string[-2] + string[-1]
+    sum = num * 4
+    print(sum)
+'''
+'''
+print("----------------------------------Length of first 3 chars--------------------------------------")
+string = input("Enter the string")
+string1 = string.split()
+for i in range(0, len(string1)):
+    if string1[i] == string1[0]:
+        first = str(string1[0])
+        print("first substring length", len(first))
+    if string1[i] == string1[1]:
+        second = str(string1[1])
+        print("second substring length", len(second))
+    if string1[i] == string1[2]:
+        third = str(string1[2])
+        print("third substring length", len(third))
+'''
+'''
+print("------------------------- reverses a string if it's length is a multiple of 4------------------------------ ")
+string = input("Enter the string")
+if len(string) % 4 == 0:
+    string1 = string[::-1]
+    print(string1)
+else:
+    print("string not length not divisible by 4 ")
+'''
+'''
+print("---------------------------program to sort a string lexicographically----------------------------------")
+string = input("Enter the string")
+character = list(string)
+character.sort()
+print(''.join(character))
+'''
+'''
+print("--------------------------reverse a string-------------------------------------------------------------")
+string = input("Enter the string")
+string1 = string[::-1]
+print(string1)
+
+string = input("Enter the string")
+num = " "
+for i in range(len(string)-1, -1,-1):
+    num += string[i]
+print(num)
+'''
+'''
+print("---------------------------------reverse words in a string-------------------------------------------")
+string = input("Enter the string")
+string1 = string.split()
+num = " "
+for i in range(len(string1)-1, -1, -1):
+    num += string1[i] + ' '
+print(num)
+'''
+'''
+print("------------------------strip a set of characters from a string-----------------------------------------------")
+num = input("Enter the character with special char")
+string = list(num)
+string1 = ""
+num1 = [ ]
+num2 = [ ]
+for i in string:
+    if ("a" <= i <= "z") or i == " ":
+        num1 += i
+    elif i != " ":
+        num2 += i
+print(''.join(num1))
+print(''.join(num2))
+'''
+'''
+print("---------------------------lowercase first n characters in a string-------------------------------")
+string = input("Enter the string")
+value = int(input("enter the nth number"))
+string1 = " "
+for i in range(0, len(string)):
+    if i <= (value-1):
+        num = string[i].lower( )
+        string1 += num
+    else:
+        string1 += string[i]
+print(string1)
+'''
+'''
+print("---------------------------split a string on the last occurrence of the delimiter-------------------------------")
+string = input("Enter the string")
+value = (input("enter the  number"))
+string1 = " "
+count = 0
+for i in range(len(string)-1, -1, -1):
+    if string[i] == value or count >= 1:
+        string1 += string[i]
+        count += 1
+print(string1[::-1])
+'''
+'''
+print("---------------------------find the first non-repeating character in given string-------------------------------")
+string = input("Enter the string")
+count = {}
+for i in string:
+    if i in count:
+        count[i] += 1
+    else:
+        count[i] = 1
+for i in string:
+    if count[i] == 1:
+        repeat_char = i
+        break
+else:
+    repeat_char = None
+print(repeat_char)
+'''
+'''
+print("-------------------------------find the first repeated character in a given string-----------------------")
+string = input("Enter the string")
+count = {}
+for i in string:
+    if i in count:
+        count[i] += 1
+    else:
+        count[i] = 1
+for i in string:
+    if count[i] == 2:
+        repeated = i
+        break
+else:
+    print("non repeated")
+
+print(repeated)
+'''
+'''
+print("-----------------------find the first repeated word in a given string-----------------------------")
+string1 = "aa ss dw dk sd dw"
+string = string1.split()
+count = { }
+for i in string:
+    if i in count:
+        count[i] += 1
+    else:
+        count[i] = 1
+for i in string:
+    if count[i] == 2:
+        repeated_word = i
+        break
+print("repeated word is", repeated_word)
+'''
+'''
+print("------------------------find the second most repeated word in a given string------------------------------")
+string1 = input("Enter the string")
+string = string1.split( )
+count = { }
+for i in string:
+    if i in count:
+        count[i] += 1
+    else:
+        count[i] = 1
+for i, j in count.items():
+    print("This words", i, "number of times", j)
+'''
+'''
+print("----------------- find the maximum occurring character in a given string--------------------------------")
+string = input("enter the string")
+count = { }
+for i in string:
+    if i in count:
+        count[i] += 1
+    else:
+        count[i] = 1
+for i, j in count.items():
+    max_value = list(count.values())
+    print(max(max_value))
+    break
+'''
+'''
+print("-------------------------remove duplicate characters of a given string-------------------------------")
+string = input("Enter the string")
+string1 = " "
+for i in string:
+    if i in string1:
+        pass
+    else:
+        string1 += i
+print(string1)
+'''
+'''
+print("--------------print the following floating numbers with no decimal places----------------------------")
+number = float(input("Enter the value"))
+number2 = int(number)
+print(number2)
+
+number = float(input("Enter the value"))
+number2 = str(number)
+num = " "
+count = 0
+for i in number2:
+    if i != '.':
+        num += i
+    if i == "." or count == 1:
+        count += 1
+        break
+print(num)
+'''
+'''
+print("---------------------------compute sum of digits of a given string----------------------------------")
+string = input("Enter the string")   # "Hello123World456"
+num = ""
+num1 = 0
+for i in string:
+    if ("a" <= i <= 'z') or ("A" <= i <= "Z"):
+        num += i
+    elif('0' <= i <= '9'):
+        num1 += int(i)
+print(num1)
+'''
+'''
+print("------------------------Reverse a given string  Input : Python   Output : nohtyP-------------------")
+string = input("enter the string")
+string1 = string[::-1]
+print(string1)
+
+string = input("enter the string")
+for i in range(len(string)-1,-1,-1):
+    print(string[i],end='')
+'''
+'''
+print("------------------------------Reverse each word in given string Input ----------------------------")
+string = input("enter the string")
+string1 = string.split()
+string2 = string1[::-1]
+print(string2, end=" ")
+
+string = input("enter the string")
+string1 = string.split()
+for i in range(len(string1)-1, -1, -1):
+    print(string1[i], end=" ")
+'''
+'''
+print("--------------------------Reverse each word and reverse word again. Input--------------------------")
+# string = input("enter the string")
+# string1 = string.split()
+# string2 = string1[::-1]
+# string3 = string2[::-1]
+# print(string3, end="")
+
+'''
+'''
+print("--------------that accepts a string and calculate the number of digits and letters--------------------")
+string = input("Enter the string")   # "Hello123World456"
+num = ""
+num1 = " "
+num2 = 0
+for i in string:
+    if ("a" <= i <= 'z') or ("A" <= i <= "Z"):
+        num += i
+    elif('0' <= i <= '9'):
+        num1 += i
+    elif i == " ":
+        num2 += 1
+print("Total Alphabetes", len(num))
+print("Total number", len(num1))
+print("Total space", num2)
+'''
+'''
+print("-----------------------to display a number in left, right and center aligned of width 10---------------------")
+number = int(input("Enter the number"))
+left_aligned = "{:<10}".format(number)
+right_aligned = "{:>10}".format(number)
+center_aligned = "{:^10}".format(number)
+print("Left aligned:", left_aligned)
+print("Right aligned:", right_aligned)
+print("Center aligned:", center_aligned)
+
+number = input("Enter the number less than 10 width")
+left_number = 10 - len(number)
+right_number = 10 - len(number)
+center_number = (10 - len(number)) // 2 # floating division
+left_aligned = number + (" " * left_number)
+right_aligned = (right_number * " ") + number
+center_aligned = (" " * center_number) + number + (" " * center_number)
+print("Left aligned:", left_aligned)
+print("Right aligned:", right_aligned)
+print("Center aligned:", center_aligned)
+'''
+'''
+l1 = [1, 5, 2, 4, 3]
+for i in range(len(l1)-1):
+    for j in range(len(l1)-i-1):
+        if l1[j] > l1[j+1]:
+            l1[j], l1[j+1] = l1[j+1], l1[j]
+print(l1)
+'''
+'''
+print("---------find the first repeated character of a given string where the index of first occurrence is smallest-------")
+string = "acbbde"
+count = {}
+for i in string:
+    if i in count:
+        count[i] += 1
+    elif i not in count:
+        count[i] = 1
+for i in count:
+    if count[i] > 1:
+        count[i] = 0
+pos = 1
+for i in string:
+    if count[i] == 0:
+        continue
+    count[i] = pos
+    pos += 1
+print(count)
+'''
+'''
+print("------------------------print the following integers with '*' on the right of specified width-------------")
+string = input("Enter the number")
+width = int(input("Enter the width to which the * to be printed"))
+total_width = "*" * width
+print(string+total_width)
+'''
+'''
+print("------------print the following integers with zeros on the left of specified width------------------------")
+string = input("Enter the number")
+width = int(input("Enter the width to which the 0 to be printed"))
+total_width = "0" * width
+print(total_width+string)
+'''
+'''
+print("-------------------------------to add a prefix text to all of the lines in a string-----------")
+string = input("Enter the number")
+width = int(input("Enter the width to which next line to be printed"))
+count = 0
+num = ""
+for i in string:
+    count += 1
+    if count < width:
+        num += i
+    elif count == width:
+        num += i
+        print(">", num)
+        num = " "
+        count = 0
+'''
+'''
+print("----------------------------display formatted text (width=50) as output---------------------------------")
+string = input("enter the string")
+width = int("enter the width of the string")
+count = 0
+num = " "
+for i in string:
+    count += 1
+    if count < width:
+        num += i
+    elif count == width:
+        num += i
+        print 
+        
+'''
+
+
+
+
+
+
