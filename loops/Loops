@@ -1,0 +1,177 @@
+                                                        VIII. Loops:
+                                                        ============
+1. Importance of Loops
+			Loops are an essential feature of programming languages like Python as they allow you to execute a block of code repeatedly. 
+			code repitation and Automation:
+			Condition Execution:
+			Infinite Execution:
+			Controlling Program flow:
+			
+2. while loop. Explain in detail with different use cases 
+			The while loop in Python allows you to repeatedly execute a block of code as long as a given condition is True. 
+			It is useful when you want to iterate over a block of code an indefinite number of times until a specific condition is met.
+						
+						while <condition>:
+						
+						
+						countdown = 5
+						while countdown > 0:
+							print(countdown)
+							countdown -= 1
+						print("Blastoff!")
+			
+			
+			
+3. for loop. Explain in detail with different use cases 
+The for loop in Python is used to iterate over a sequence (such as a list, tuple, string, or range) or any iterable object.
+								1.Iterating over a list or tuple:
+									 
+									 tuple = [apple, bannana, grapes]
+									 for i in tuple:
+									   if i == apple:
+										  print(present)
+										else:
+										  print(Absent)
+										  
+								II. Iterating over a string
+								
+										 char = "Hello World!"
+										  for i in char:
+										   print(i)
+								   
+								III. iterating over a range: 
+								
+										for i in range(5):
+										print(i)
+										
+								IV. iteration in dictionary
+									 
+									  dict = {"AKKI": 29, "hema": 30, "gopi": 40}
+									  for i, j in dict:
+											print(i, "age", j}
+									  
+									  
+								V. Nested for
+								for i in range(1, 4):
+									for j in range(1, 4):
+										print(i, j)
+
+								
+		  
+		  
+4. while vs for
+
+Use cases: 	---->The while loop is generally useful when you want to repeat a block of code until a specific condition is met. 
+			---->The for loop is used when you want to iterate over a known sequence or iterable object.
+Condition vs Sequence:  --->The while loop relies on a condition to determine when to exit the loop. The loop continues as long as the condition remains true.
+						--->The for loop iterates over each item in a sequence, and the loop automatically terminates when all items have been processed.
+Control: 			--->In a while loop, you have more control over when to exit the loop by manipulating the condition.
+						You can use break and continue statements to control the flow within the loop.
+					--->	In a for loop, the loop automatically handles the iteration, and you have limited control over the iteration process.
+Initialization:     ---> In a while loop, you need to initialize the loop control variable before the loop, and you need to update the variable within the loop to eventually exit the loop. 
+					---> In a for loop, the loop control variable is automatically updated based on the sequence or iterable object.
+
+
+5. Give examples while with if else combination 
+				number = int(input("Enter the Number to beggin with"))
+				while number < 100:
+				  if number % 2 == 0: 
+					  print(i)
+				  else:
+					   pass
+
+6. Give examples for with if else combination
+				for i in range(1, 100):
+					if i % 2 == 0:
+						print(i)
+					else:
+					    print(i)
+				
+7. Control statements.Explain and give examples for each keyword 
+    - break --> The break statement is used to exit or terminate a loop prematurely. 
+				It is typically used within loops (such as for or while) to stop the loop execution based on a certain condition. 
+				
+				
+				for i in range(0, 100)
+					if i == 25:
+						break:
+					print(i)
+				
+    - continue --> The continue statement is used to skip the rest of the statements in the current iteration of a loop and move to the next iteration.
+	
+				for i  range (0, 100):
+					if i => 20 and i <= 30:
+						continue
+					print(i)
+					
+    - pass   --->  The pass statement is a placeholder statement that does nothing. 
+	            i = 10
+				if i == 9:
+				   pass
+8. Implement 5 examples which covers all topics if elif else for while break/continue/pass
+
+Programs:
+----------
+- Between 1 to 100
+    1. Print all numbers  
+    2. Print even numbers
+    3. Print odd numbers 
+    4. Print all prime numbers
+    5. Print numbers with power of 2 (1 2 4 8 16 32 64)
+    6. Print all numbers which are divisible by 5 and 7 
+    7. Print all numbers which are divisible by 4 or 6
+    8. Print first 14 odd numbers 
+    9. Print first 23 even numbers
+   10. Print first 6 numbers which are divisible by 4 and 6 
+   11. Print all numbers except divisible by 9
+   12. Write for loop to explain all data structures.
+  
+  
+  for i in range(1, 100):
+		print(i)
+		if i % 2 ==0:
+			print("even", i)
+		else:
+			print("odd", i)
+
+ 6,7)
+ 
+ for i in range(1, 100):
+    if (i % 5 == 0) and (i % 7 == 0):
+        print(i)
+
+for i in range(1, 100):
+    if (i % 4 == 0) and (i % 6 == 0):
+        print(i)
+		
+8,9		
+ count = 0
+for i in range(1, 100):
+    if i % 2 == 0:
+        print("even", i)
+        count += 1
+    if count == 14:
+        break
+count = 0
+for i in range(1, 100):
+    if i%2 == 0:
+        pass
+    else:
+        print(i)
+        count += 1
+        if count == 14:
+            break
+	
+10
+count = 0
+for i in range(1, 100):
+    if (i % 4 == 0) and (i % 6 == 0):
+        print(i)
+        count += 1
+    if count == 6:
+        break
+
+11
+for i in range(1, 100):   
+    if i % 9 == 0:
+        print(i)
