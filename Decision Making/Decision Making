@@ -1,0 +1,79 @@
+1. What is Decision Making. Explain different scenarios when to go for Decision Making
+
+Decision making refers to the process of selecting the best course of action among multiple available options or alternatives.
+			Branching:				 Decision making is used to create branches in the program's flow based on certain conditions. It allows the program to execute different sets of instructions depending on whether a condition is true or false. For example, you may want to execute one block of code if a user is logged in and another block of code if they are not.
+			Error Handling:			 Decision making is often employed in error handling scenarios. When an error or exception occurs, the program can use decision-making constructs to determine how to handle the error. This may involve displaying an error message, logging the error, or taking alternative actions to recover from the error gracefully.
+			User Input Validation:	 When accepting user input, decision making is used to validate and verify the input. Conditions can be checked to ensure that the input meets certain criteria or constraints. For instance, if a user is asked to enter a number, decision-making constructs can be used to check if the input is a valid numeric value.
+			Workflow Control: 		 Decision making plays a crucial role in controlling the flow of a program or workflow. It allows you to set conditions and rules for executing specific actions or steps in a sequence. This is often seen in scenarios where certain steps should only be executed if certain conditions are met.
+			Data Filtering and Processing: Decision making is commonly used in data filtering and processing tasks. It allows you to define conditions for selecting or filtering specific data based on certain criteria. For example, you might use decision-making constructs to filter out certain records from a dataset based on their values or properties.
+			Rule-Based Systems: 	 Decision making is fundamental in rule-based systems where a set of predefined rules or conditions are used to make decisions or automate certain actions. These systems are often used in areas such as expert systems, artificial intelligence, and business rules engines.
+
+
+2. Give examples for below conditions
+	1. single if : 
+					number = 15
+					if number > 10 or number< 15:
+					print(true)
+	2. if else:
+					number = 15
+					if number > 10 or number< 15:
+					print(true)
+					else:
+					print(false)
+	
+	3. if elif else:
+					number = 15
+					if number < 10 or number>0:
+					print(true)
+					elif number >13 and number<18
+					else:
+					print(false)
+					
+	4. if elif elif else:
+				
+				
+				num = 7
+				if num > 10:
+					print("Number is greater than 10")
+				elif num > 5:
+					print("Number is greater than 5 but less than or equal to 10")
+				elif num > 0:
+					print("Number is greater than 0 but less than or equal to 5")
+				else:
+					print("Number is less than or equal to 0")
+
+	   
+	5. Nested if: 
+	
+				num = 10
+				if num > 0:
+					print("Number is positive.")
+					
+					if num % 2 == 0:
+						print("Number is even.")
+					else:
+						print("Number is odd.")
+				else:
+					print("Number is non-positive.")
+
+3. Prepare Programs for below questions
+	1. Prepare state and assign North South West East 
+	    north = []
+		south = ['Andhra Prades', 'Telangana', 'Karnataka','Tamil Nadu', 'Kerala']
+		west = []
+		east = []
+	2. Prepare dictionary with key as state name and value as "list of districts"
+4. Get employee details(in dict format, empid,name,sal, exp) and update hike for employee with below 
+		If exp is 0 to 2 years - 10% Hike
+				  2 to 5 years - 20% Hike
+				  5 to 8 years - 30% Hike
+				  8+           - No hike
+5. Explain below terms in detail 
+	- Requirement  :- Requirements refer to the specific functionalities or features that a software or system should possess in order to fulfill the needs of the stakeholders.
+	- User Criteria :- User criteria are the criteria or conditions set by the users or stakeholders that define their expectations or requirements for a software or system.
+	- Validations(Client vs Server) :- Validations refer to the process of checking the integrity, accuracy, and correctness of data or inputs entered by the user. 
+					- Client-Side Validation: Client-side validation is performed on the user's device or web browser using client-side scripting languages such as JavaScript.
+					- Server-Side Validation: Server-side validation is performed on the server where the application or system is hosted. It is used to validate user inputs after they are submitted from the client-side.
+6. State vs Behavior . Examples
+state = datatype and datastructure
+behaviour = operators, Decision Making, Loops
