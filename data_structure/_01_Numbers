@@ -1,0 +1,24 @@
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------		
+I. Numbers:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+           27. Types of numbers. Explain each use case 
+					   integer --> number with out decimal point
+					   float   --> number with factional values and integers 
+					   complex --> number with Imaginary numbers
+					   boolean --> with true or false statement
+           28. type conversions
+							Type conversions (also known as type casting) allow you to convert a value from one data type to another. 
+							Python provides several built-in functions for performing type conversions. 
+							int()
+							float()
+							str()
+							bool()
+							list(), tuple(), set(), dict(): These functions are used to convert values to different data structures. 
+							They can convert iterable objects (such as lists, tuples, sets, or dictionaries) to the corresponding data structure
+           29. Explain different operations of boolean type
+					x = 5
+					y = 10
+					print(x == y)  # Output: False
+					print(x < y)   # Output: True
