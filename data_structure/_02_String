@@ -1,0 +1,404 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                  II. String:
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+			30. Generic functions in Python.
+				===>1.Generic functions are functions declared with one or more generic type parameters
+					2.They may be methods in a class or struct , or standalone functions.
+					example,
+						 dict[int, str] has the type parameters int and str
+						 list[int] has a type parameter int .
+
+				4. Realtime examples for usage of integer,float,boolean,string
+				   examples of int real time-----
+						Total amount we have                     = 5000
+						spent on both side cab                   = 2 * 300
+						movie ticket after discount              = 600 - 10/100
+						dinner cost                              = 2000
+						amount left                              = Total amount we have - spent on both side cab -  movie tickect after discount -  dinner cost
+																 =(5000) - (2 * 300) - (600 - 10/100) - (2000)
+																 =1860.
+
+
+					   examples on float:
+					   total amount paid to vn2                   = 408253
+					   gst added to the amount                    = 408253 * 18/100
+					   bank interest on total amount              = 408253 * 11/100
+					   total amount after gst and bank loan       = total amount paid to vn2 + gst added to the amount  + bank interest on total amount
+																  = (408253) + (408253 * 18/100) + (408253 * 11/100)
+																  =  408253  +  73484.54  + 44907.83
+																  = 526645.37.
+
+					   examples of boolean:
+					   attribute = employee
+					   state = e_id,e_name,e_salary,e_ bank_account
+					   datatypes = int,string,float,string.
+
+					   e_salary is changed gives true otherwise false.
+					   e_bank_account detail update gives true otherwise false.
+
+
+
+					   exaples on string:
+					   s = 'status'
+					   s = ljust(15,'*')
+					   s2 = 'i love my country'
+					   s3 = s2.capitalize()
+					   s4 = 'die for country'
+					   s4 =s4.split(' ')
+
+					   print =      ****status
+								   I Love My Country
+								 'die','for','country'
+
+
+
+				31. When to use string
+				====> Strings are used for store text/characters.
+
+				32. Importance of String datatype in Python
+				=====> The string type is used for chains of characters/numbers (but more commonly for text).
+					   The characters need to be placed between quotes.
+						In Python, you can use either single or double quotes.
+
+					   ***mainly strings are used for single alphabets/numerics also in datatypes but in data frame we used bunch of alphabets/numerics.
+
+				33.Why and how string is Immutable.Explain in detail
+
+				===># Immutability: Once content is created
+									# Use AS IS
+									# Delete IT
+								 # But we cant modify it
+
+					so that programmers cannot alter the contents of the object.
+					This avoids unnecessary bugs.
+
+					example-
+						 name_1 = "Aarun"
+						 name_1[0] = 'T'
+
+						 we get error messeage in output.but we can concatenate two string with the help of 2 tring
+
+						 name_1 = "Aarun"
+						 name_2 = "T" + name_1[1:]
+								print("name_1 = ", name_1, "and name_2 = ", name_2).
+
+			34. What is Sequence. Types
+				====> sequence is the generic term for an ordered set.
+					  There are several types of sequences in Python, the following three are the most important.
+					   String
+					   List
+					   Tuple
+					   Range
+
+					   Lists are the most versatile sequence type.
+					   The elements of a list can be any object, and lists are mutable - they can be changed.
+
+           35. Sequence operations on String
+									   Operations on Sequence *:
+							===========================
+							1. Indexing
+							2. Slicing
+							3. Adding
+							4. Multiplying
+							5. Checking for Membership
+
+							6. len()  7. max()  8. min()
+
+							msg = 'hello world'
+								 # 012345678...
+
+							print("Message is  :", msg)
+
+							# 1 INDEXING
+							print("----- 1st index in message1 -----", msg[6])
+							print("----- 4th index in message1 -----  Positive : ", msg[1], "  Negative :  ", msg[-11])
+							print("------Last l -------------------- : ", msg[-2])
+
+							# 2 SLICING  # start(index) stop(position) step(diff)  str[start:stop:step]
+							# sequence[start:stop:step]
+							#          indexing:position:diff
+							msg = 'hello world'
+
+												 -6 -5-4-3-2 -1   : Negative Indexing
+										h e l l o   w  o r l d
+										0 1 2 3 4 5 6  7 8 9 10  : Indexing
+										1 2 3 4 5 6 7  8 9 10 11 : Position
+
+
+
+							print("Slicing positive : ", msg[0:4])   # 0 index  4 position
+							print("Slicing positive : ", msg[6:11])  # print from index 6 to position 11
+							print("Slicing Negative : ", msg[-6:-1]) #
+							print("Slicing with start stop step : ", message2[0:9:3], " == ", message2[0:13], "  ", message2[0:13:2], " ", message2[0:13:3])
+							print("Slicing without any positions + :", message2[::], "  ", message2[2::], " ", message2[:8:], " ", message2[::2], " ", message2[::3])
+							print("Slicing without any positions - :", message2[::], "  ", message2[-2::], " ", message2[:-8:], " ", message2[::-2], " ", message2[::-3])
+
+
+
+							# 3 ADDING CONCATINATION
+							str1 = 'Hello'
+							str2 = 'World'
+							print("Entire string : ", str1 + str2)
+
+							final_message = msg + " Welcome to " + message2
+
+							print("Concatenation :: ", final_message)
+
+
+
+							# 4 MULTIPLYING
+							print("Multiplication : ", msg * 4)
+							print("Multiplication : ", final_message * 4)
+
+
+							# 5 CHECKING FOR MEMBERSHIP
+							print("--Membership---- : ", "PYTHON" in message2)
+							print("--Membership---- : ", "N" in message2)
+							print("--Membership---- : ", "IAM" in message2)
+
+
+							# 6 len()
+
+							msg ='Hello World'
+
+							print("Length of string : ", len(msg))
+
+							# 7 max()  # ASCII Table a = 97    A = 65
+							print("Max value in string  : ", max(msg))
+							msg1 = '12345'
+							print("Max value in string  : ", max(msg1))
+							print("Max value in string  : ", max('abcd'))
+							print("Max value in string  : ", max('ABCD'))
+							print("Max value in string  : ", max('ABDFSDfdsasdas'))
+							print("Max value in string  : ", max('abfd212rd'))
+							print("Max value in string  : ", max('@$##@$#!%'))
+							print("Max value in string  : ", max('1234213e'))
+
+
+
+
+
+							# 8 min()
+							print("Min value in string  : ", min(msg))
+							msg1 = '12345'
+							print("Min value in string  : ", min(msg1))
+
+           36. Memory allocation of String 
+					 It is causing heap allocation and it is very costly and you have to go through each and every step and then return.
+					 so many allocations involved that made heap costly.
+					 To make it efficient----
+					 1. memory for large string is allocated on heap.
+					 2. small string it is allocated on static buffer.
+					 
+					      ***same as variable:
+					   It also derefrence the first value after assigning the different value in same variable.
+					   it create the different reference location for the value and the first reference value
+                       become garbage and it can be cleaned by memory management
+
+           37. Explain 10 important functions of String
+						 1. capitalize() :: Returns a string with the first character as upper case.
+						 2. center(width, fillchar):: Returns a string with fillchar in starting and ending of char.
+						 3.count(str, beg= 0,end=len(string)::  It will count the letter in the string.
+																we can also give the range of starting and ending with comma(,) seperated.
+						 4.find(str, beg=0 end=len(string))::
+							   It will find the index position of char/numeric in string.
+							 **but if char/numeric is not in string it return -1 as output value.
+						 5.index(str, beg=0, end=len(string))::
+								It will find the index position of char/numeric in string.
+							 **but if char/numeric is not in string it return o or error as output value.
+						 6.join(seq)::
+							   Merges (concatenates) the string representations of elements in sequence seq into a string,
+								using separator string.
+
+						 7.len(string)::
+							   Returns the length of the string
+
+						 8.replace(old, new [, max])::
+								It will replace the alpha/numeric charcter.
+								In the paranthesis we provide old char and new character with comma seperated.
+						 9.split(str="")::
+								Splits string according to delimiter str (space if not provided) and returns list of substrings; split into at most num substrings if given.
+						 10.strip([chars])::
+								 it will remove all the space in start and enf of the string.
+								 
+								 
+								 Types of dataframe:
+
+        1.list = comma(,)seperated  and closed by square bracket([])
+                 It contains mixed value like int,string.
+                 value can be repeated
+
+        2.set = comma(,)seperated  and closed by square bracket({})
+                It contain unique value of int,string.
+
+        3.tuple = comma(,)seperated  and closed by square bracket(())
+                It contain any value of int,string.but once it assign it can be change.
+
+
+        4.dictionary = key value is comma(:)seperated  and value to value (,) closed by square bracket({})
+                It contain key value pair.
+                key can't change but value changes after assign.
+
+
+    1. LIST:-   **items in a list need not be of the same type.
+                       E_ids = [13, 24, 23, 44,25, 6, 7]
+
+
+            List operations :    C R U D
+
+                 i.Accessing values in Lists:
+                        To access values in lists, use the square brackets for slicing along with the index or
+                        indices to obtain value available at that index
+
+                    list1 =['physics','chemistry',1997,2000];
+                    list2 =[1,2,3,4,5,6,7]
+                    print("list1[0]: ",list1[0])
+                    print"list2[1:5]: ", list2[1:5]
+list1[0]:  physics
+list2[1:5]:  [2, 3, 4, 5]
+
+
+
+
+                 ii.Updating values in Lists:
+                           You can update single or multiple elements of lists by giving the slice on the left-hand side
+                           of the assignment operator
+
+
+                        list =['physics','chemistry',1997,2000];
+                        print"Value available at index 2 : "
+                        print list[2]
+                        list[2]=2001;
+                        print"New value available at index 2 : "
+                        print list[2]
+                        Value available at index 2 :
+                        1997
+                        New value available at index 2 :
+                        2001
+
+
+
+            iii.Delete List Elements in Lists:
+                            To remove a list element, you can use either the del statement if you know exactly
+                            which element(s) you are deleting or the remove() method if you do not know.
+
+
+                For example −
+                    list1 =['physics','chemistry',1997,2000];
+                        print list1
+                    del list1[2];
+                        print"After deleting value at index 2 : "
+                        print list1
+                        ['physics', 'chemistry', 1997, 2000]
+                    After deleting value at index 2 :
+                        ['physics', 'chemistry', 2000]
+
+
+
+
+           3. Tuples:
+                 A tuple is a sequence of immutable Python objects.
+
+                Tuples are sequences, just like lists.
+
+                The differences between tuples and lists are, the tuples cannot be changed unlike lists and
+                tuples use parentheses, whereas lists use square brackets.
+
+                Creating a tuple is as comma-separated values.
+
+
+                For example −
+
+                tup1 = ('physics', 'chemistry', 1997, 2000)
+                tup2 = (1, 2, 3, 4, 5 )
+                tup3 = "a", "b", "c", "d"
+
+            ***To access values in tuple, use the square brackets for slicing along with
+               the index or indices to obtain value available at that index.
+
+
+            tup1 =('physics','chemistry',1997,2000);
+            tup2 =(1,2,3,4,5,6,7);
+               print"tup1[0]: ", tup1[0];
+               print"tup2[1:5]: ", tup2[1:5];
+                                     When the above code is executed, it produces the following result −
+                       tup1[0]:  physics
+                       tup2[1:5]:  (2, 3, 4, 5)
+
+
+         Updating Tuples:
+                    Tuples are immutable which means you cannot update or change the values of tuple elements.
+                    You are able to take portions of existing tuples to create new tuples
+                    as the following example demonstrates −
+
+                tup1 =(12,34.56);
+                tup2 =('abc','xyz');
+                                                           # Following action is not valid for tuples
+                                                           # tup1[0] = 100;
+                                                           # So let's create a new tuple as follows
+                 tup3 = tup1 + tup2;
+                     print tup3;
+                 When the above code is executed, it produces the following result −
+                      (12, 34.56, 'abc', 'xyz')
+
+
+               Delete Tuple Elements:
+                     Removing individual tuple elements is not possible. There is, of course, nothing wrong with putting
+                     together another tuple with the undesired elements discarded.
+
+                     To explicitly remove an entire tuple, just use the del statement.
+
+                 For example −
+                    tup =('physics','chemistry',1997,2000);
+                       print tup;
+                    del tup;
+                       print"After deleting tup : ";
+                       print tup;
+
+
+              4. Dictionary:- Keys are unique within a dictionary while values may not be.
+                              The values of a dictionary can be of any type, but the keys must be of an immutable data type
+                              such as strings, numbers, or tuples
+
+
+
+
+                       i.Accessing Values in Dictionary:
+                               To access dictionary square brackets along with the key to obtain its value.
+                           example −
+                                  dict  = {'Name':'Zara',
+                                  'Age':7,
+                                  'Class':'First'
+                                  }
+                                     print"dict['Name']: ", dict['Name']
+                                     print"dict['Age']: ", dict['Age']
+                                  dict['Name']:  Zara
+                                  dict['Age']:  7
+
+                      ii.Updating Dictionary:
+                                  You can update a dictionary by adding a new entry or a key-value pair,
+                                  modifying an existing entry, or deleting an existing entry
+                                  as shown below in the simple example –
+
+                              dict ={'Name':'Zara','Age':7,'Class':'First'}
+                              dict['Age']=8;# update existing entry
+                              dict['School']="DPS School";# Add new entry
+                                 print"dict['Age']: ", dict['Age']
+                                 print"dict['School']: ", dict['School']
+
+
+                              dict['Age']:  8
+                              dict['School']:  DPS School
+
+
+
+                         iii.Delete Dictionary Elements:
+
+
+                        example −
+                             dict ={'Name':'Zara','Age':7,'Class':'First'}
+                             del dict['Name'];# remove entry with key 'Name'
+                             dict.clear();# remove all entries in dict
+                             del dict ;# delete entire dictionary
