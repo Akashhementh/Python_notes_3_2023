@@ -1,0 +1,309 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+								 
+	                                                                  	iii. List:
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+		1. What is use of list. Explain different use cases of List
+			Lists are used to store multiple items in a single variable.
+			List items are ordered, changeable, and allow duplicate values.
+
+             different use cases of list:
+                  1.Lists are a fundamental data structure in programming that allow you to store
+                    and organize collections of items Storing and accessing a collection of elements.
+                  2.Iterating over elements:
+                  3.Sorting and searching: Lists provide methods to sort their elements in ascending
+                   or descending order based on certain criteria.
+                  4.Holding function arguments or return values: Lists can be used to pass multiple
+                   values to a function or receive multiple values from a function.
+                  5.Managing ordered data: Lists allow you to maintain the order of elements as
+                   they are added or removed.
+                  6.Implementing data structures like linked lists: Linked lists are a type of data structure
+                   where elements are stored in nodes that are connected
+                  7.using nested loops also-inside loops we can create another loop.
+
+		2. Sequence operations on List
+		
+							1. Sequence operations
+
+						print("----------1. Indexing-------------")
+
+						[12, 22, 13, 54, 35, 76, 14]   1 2 3 4 5 6 7 8 9 10
+						  0  1   2   3   4   5   6
+
+					print("List1 1    : ", list1[1])
+					print("List1 5,-1 : ", list1[5], list1[6], list1[-1])
+
+					print("----------2. Slicing-------------")
+					print("Slicing operation : ", list1[2:])
+					print("Slicing operation : ", list1[2:5])
+					print("Slicing operation : ", list1[:5])
+					print("Slicing operation : ", list1[::1])
+					print("Slicing operation : ", list1[::2])
+
+					print("----------3. Adding-------------")
+					print("Adding 2 lists    :", [1, 2, 3] + [4, 5, 6])  # print(10+20)
+					list1 = [10, 20, 30]
+					list2 = [11, 12, 13]
+					print("Adding 2 lists    :", list1+list2)   # x=10 y= 20   print(x+y)
+
+
+					print("----------4. Multiplying-------------")
+					print("Multiply 2 lists :", [1, 2, 3] * 5)
+
+					print("----------5. Membership-------------")
+					print("Check value : ", 1 in [1, 2, 3])
+
+					print("----------6. length-------------")
+					print("Length of list1 : ", len(list1))
+
+					print("----------7. max-------------")
+					print("Length of list1 : ", max(list1))
+
+					print("----------8. min-------------")
+					print("Length of list1 : ", min(list1))
+
+		3. Characteristics(Properties) of List:
+				 1. Follows indexing mechanism while storing elements(Sequence)
+				 2. List is Mutable *
+				 3. List allows Duplicate elements
+				 4. Maintains Insertion order wrt Memory
+				 5. List will allow both Homogeneous and Heterogenous data
+
+
+		4. CRUD operations on List:
+
+				it consist of 4 elements create read update  & delete
+                                     1. CREATE
+                          list1 = [1, 2, 3, 4, 5, 6]
+
+                  list1 = [1, 2, [30, 40, 50], (11, 22, 33), {1, 2, 3}, {1: 100, 2: 200}]
+
+                                      2. RETRIEVE
+                          print('List values1 : ', list1)
+                          print('List values2 : ', list1[2])
+                          print('List values21 : ', list1[2][1])
+
+                                      3. UPDATE
+                                     list1[1] = 200
+                                 print('List values2 : ', list1)
+
+                                      4. DELETE
+                                    del list1[2]
+                                print('List values3 : ', list1)
+                                     del list1
+                                print('List values4 : ', list1)
+								
+								
+		5. Memory allocation of List:
+			      1. initially list is created: ex-: [2,4,67,89,57,82]
+				  2.if we are the updating the value in list with indexing,it will
+								starting reading R.H.S
+									 |||
+								create a address memory randomly
+									 |||
+								then L.H.S part start working
+									 |||
+								then it reads the indexing postion of value
+									 |||
+								dereferencing the  lat value and refernce of new value is created
+									 |||
+								the de-refrenced value get into garbage collection.
+
+				  and finally the de-refrenced address manged by memory called garbage collection.
+
+
+
+		6. Write all possible combinations of list structure(homo,hetero with all data types, data structures)
+				1.Homogeneous list of integers: [1, 2, 3, 4, 5]
+
+				2.Homogeneous list of floats: [1.5, 2.7, 3.14, 4.2, 5.0]
+
+				3.Homogeneous list of strings: ["apple", "banana", "cherry", "date"]
+
+				4.Homogeneous list of booleans: [True, False, True, True]
+
+				5.Homogeneous list of tuples: [(1, 2), (3, 4), (5, 6)]
+
+				6.Homogeneous list of lists: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+				7.Heterogeneous list with mixed data types: [1, 2.5, "apple", True]
+
+				8.Heterogeneous list with nested data structures: [1, [2, 3], (4, 5), {"name": "John", "age": 30}]
+
+				9.Heterogeneous list with dictionaries: [{"name": "Alice", "age": 25}, {"name": "Bob", "age": 35}]
+
+				10.List of lists with different data types: [[1, 2, 3], ["apple", "banana", "cherry"], [True, False, True]]
+
+				11.List of tuples with different data types: [(1, "apple", True), (2, "banana", False), (3, "cherry", True)]
+
+				12.List of dictionaries with different data types: [{"name": "Alice", "age": 25}, {"name": "Bob", "isStudent": True}]
+
+				13.List of mixed data structures: [1, [2, 3], (4, 5), {"name": "John", "grades": [80, 90, 75]}]
+
+				14.List of custom objects: [obj1, obj2, obj3] (where obj1, obj2, obj3 are instances of a custom-defined class)
+
+
+		7. Explain about each method of List
+              append:
+              pop:
+              
+
+												  Builtin functions:
+												 ---------------------
+										1.append insert extend   : UPDATE
+										2.pop  remove            : DELETE
+										3.count                  : RETRIEVE
+										4.index                  : RETRIEVE
+										5.reverse                : UPDATE
+										6.sort                   : UPDATE
+										7.copy                   : CREATE
+
+			1.len(list): Returns the number of elements in the list.
+                  fruits = ["apple", "banana", "cherry"]
+                         print(len(fruits))
+                         ==Output: 3
+
+			2.list.append(element): Adds an element to the end of the list.
+                   numbers = [1, 2, 3]
+                    numbers.append(4)
+                            print(numbers)
+                        === Output: [1, 2, 3, 4]
+
+			3.list.extend(iterable): Appends elements from an iterable (such as another list) to the end of the list.
+                       numbers = [1, 2, 3]
+                        numbers.extend([4, 5, 6])
+                                print(numbers)
+                             ==== Output: [1, 2, 3, 4, 5, 6]
+			4.list.insert(index, element): Inserts an element at a specified index in the list.
+                        fruits = ["apple", "banana", "cherry"]
+                        fruits.insert(1, "orange")
+                                print(fruits)
+                              === Output: ["apple", "orange", "banana", "cherry"]
+
+			5.list.remove(element): Removes the first occurrence of a specified element from the list.
+                       numbers = [1, 2, 3, 4, 2]
+                        numbers.remove(2)
+                                print(numbers)
+                             === Output: [1, 3, 4, 2]
+			6.list.pop(index): Removes and returns the element at a specified index. If no index is specified, the last element is removed.
+                         numbers = [1, 2, 3, 4]
+                         pop_element = numbers.pop(1)
+                                    print(popped_element)
+                                  ==== Output: 2
+
+                         print(numbers)
+                       ==== Output: [1, 3, 4]
+
+			8.list.index(element): Returns the index of the first occurrence of a specified element in the list.
+                         fruits = ["apple", "banana", "cherry"]
+                          index = fruits.index("banana")
+                                    print(index)
+                                  ==== Output: 1
+
+			9.list.count(element): Returns the number of occurrences of a specified element in the list.
+                               numbers = [1, 2, 3, 2, 4, 2]
+                               count = numbers.count(2)
+                                   print(count)
+                              === Output: 3
+			10.list.sort(): Sorts the elements of the list in ascending order.
+                         numbers = [4, 2, 1, 3]
+                         numbers.sort()
+                              print(numbers)
+                            ==== Output: [1, 2, 3, 4]
+			11.list.reverse(): Reverses the order of the elements in the list.
+                         numbers = [1, 2, 3, 4]
+                         numbers.reverse()
+                                print(numbers)
+                              ==== Output: [4, 3, 2, 1]
+			12.list.copy(): Returns a shallow copy of the list.
+                         fruits = ["apple", "banana", "cherry"]
+                         fruits_copy = fruits.copy()
+                                       print(fruits_copy)
+                                    === Output: ["apple", "banana", "cherry"]
+
+
+
+		8. shallow copy vs deep copy:
+			shallow copy:
+               -- A shallow copy creates a new object that references the original elements of the copied object.
+               -- It creates a new list object, but the elements inside the new list is same as original list.
+               -- If you make changes to the original list or any of its elements, those changes will be
+                  reflected in the shallow copy as well.
+
+                  examples:
+                     original_list = [1, 2, [3, 4]]
+                     shallow_copy = original_list.copy()
+
+                     original_list[0] = 10  # Modify original_list
+                     original_list[2].append(5)  # Modify the nested list
+
+                                print(original_list)
+                             === Output: [10, 2, [3, 4, 5]]
+                                print(shallow_copy)
+                             ===Output: [1, 2, [3, 4, 5]]                       #(same as original_list)
+
+
+             Deep Copy:
+                 ---A deep copy creates a new object with completely independent copies of all the elements present
+                    in the original object.
+                 ---It means that even if you make changes to the original list or any of its elements,
+                    the deep copy remains unaffected.
+        
+						example:-
+
+                       original_list = [1, 2, [3, 4]]
+                       deep_copy = copy.deepcopy(original_list)
+
+                      original_list[0] = 10  # Modify original_list
+                      original_list[2].append(5)  # Modify the nested list
+
+                                  print(original_list)
+                               === Output: [10, 2, [3, 4, 5]]
+                                   print(deep_copy)
+                               === Output: [1, 2, [3, 4]] (unchanged)
+
+
+
+
+
+		9. append vs extend:-
+			append:--Adds an element to the end of the list.
+                   numbers = [1, 2, 3]
+                    numbers.append(4)
+                            print(numbers)
+                        === Output: [1, 2, 3, 4]
+
+			extend:--Appends elements from an iterable (such as another list) to the end of the list.
+                       numbers = [1, 2, 3]
+                        numbers.extend([4, 5, 6])
+                                print(numbers)
+                             ==== Output: [1, 2, 3, 4, 5, 6]
+
+		10. pop vs remove
+			remove:--- Removes the first occurrence of a specified element from the list.
+                       numbers = [1, 2, 3, 4, 2]
+                        numbers.remove(2)
+                                print(numbers)
+                             === Output: [1, 3, 4, 2]
+            pop:--- Removes and returns the element at a specified index. If no index is specified,
+                    the last element is removed.
+                         numbers = [1, 2, 3, 4]
+                         pop_element = numbers.pop(1)
+                                    print(popped_element)
+                                  ==== Output: 2
+
+                         print(numbers)
+                       ==== Output: [1, 3, 4]
+
+
+		11. Pass by value vs Pass by reference:
+            pass by value ----
+               ----It makes a copy of the value of the argument is made and passed to the function or method.
+               ----Any changes made to the parameter within the function do not affect the original value
+                   outside the function. The function works with its own local copy of the data
+
+            Pass by reference:
+                --In pass by reference, instead of passing a copy of the value, a reference or address of the argument
+                   is passed to the function.
+                --This means that changes made to the parameter within the function directly affect the original value outside the function.
+                --The function can modify the actual data passed.
