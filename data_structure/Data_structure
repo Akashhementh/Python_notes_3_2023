@@ -1,0 +1,44 @@
+=========================================================================================================================================================
+																					Data structures
+=========================================================================================================================================================
+24. What are CRUD operations.Explain in detail
+
+CRUD stands for Create, Read, Update, and Delete. It is a set of fundamental operations used to manipulate data in various systems,
+ such as databases. Here's a brief explanation of each operation:
+ 
+Create: Create involves inserting new data into a system. In the context of a database, it means adding a new record or entry.
+Read: Read involves retrieving existing data from a system. It allows you to fetch and view data from the system, typically based on specified criteria.
+Update: Update involves modifying existing data in a system. It allows you to change the values of specific attributes or fields in the data
+Delete: Delete involves removing existing data from a system. It allows you to eliminate records or entries that are no longer needed. 
+
+25. Sequence.Types. Operations on each sequence
+	
+					Operations on Sequence ***:
+				===========================
+				1. Indexing
+				2. Slicing
+				3. Adding
+				4. Multiplying 
+				5. Checking for Membership
+
+				6. len()  7. max()  8. min()
+	
+	
+	
+	
+26. HTTP Request methods for CRUD. Explain in detail 
+		
+		HTTP (Hypertext Transfer Protocol) is the protocol used for communication between clients (such as web browsers) and servers. 
+		In the context of CRUD (Create, Read, Update, Delete) operations, HTTP provides several request methods that map to these operations.
+		Here are the commonly used HTTP request methods for CRUD operations:
+		
+		GET:
+				The GET method is used to retrieve or read data from a server.
+		POST:
+				The POST method is used to submit data to the server for creating new resources.
+		PUT:
+				The PUT method is used to update existing resources on the server. 
+		PATCH:
+				The PATCH method is used to partially update existing resources on the server.
+		DELETE:
+				The DELETE method is used to delete existing resources on the server.
