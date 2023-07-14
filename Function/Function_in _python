@@ -1,0 +1,681 @@
+===========================================================================================================================================================
+                                                                        Functions
+
+=================================================================================================================================================
+Function : Function can be called as a section of a program that is written once and can be executed whenever required in the program, thus making code reusability.
+
+
+Why Functions:
+		1. A function is a block of code which only runs when it is called.
+		2. It is a section of a program that is written once and can be executed whenever required.
+		3. Code reusability.
+		4. can pass data, known as parameters, into a function.
+		5. A function can return data as a result.
+		6. Avoids code duplication.
+		7. When enhancements are required, we need "code changes" in only one place.						
+								
+								
+								
+								
+								
+								Types of function:
+
+Built-in Functions: 
+	These are pre-defined functions that are available in Python. Examples include print(), len(), type(), and range(). 
+	They provide basic functionality and are included in Python's standard library.
+
+User-defined Functions: 
+	These functions are created by the users to perform specific tasks. Users can define their own functions using 
+	the def keyword and customize their behavior as needed.
+
+Recursive Functions: 
+	Recursive functions are functions that call themselves within their own definition. 
+	They are useful for solving problems that can be broken down into smaller, simpler versions of the same problem.
+	
+	
+						def fibonacci(n):
+							if n <= 0:
+								return []
+							elif n == 1:
+								return [0]
+							elif n == 2:
+								return [0, 1]
+							else:
+								fib_sequence = fibonacci(n - 1)
+								fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+								return fib_sequence
+
+						num_terms = 10
+						result = fibonacci(num_terms)
+						print("Fibonacci Sequence:", result)
+
+
+
+
+
+
+Anonymous Functions (Lambda Functions):
+	Lambda functions are small, anonymous functions that can be defined without a name.
+	They are created using the lambda keyword and are commonly used in functional programming and with higher-order functions like map() and filter().
+									
+										add_numbers = lambda x, y: x + y
+										result = add_numbers(5, 3)
+										print("Result:", result)  # Output: Result: 8
+		
+		Lambda functions are anonymous functions that can be used wherever function objects are required.
+		They are typically used for simple, one-line functions and as arguments to higher-order functions like map(), filter(), and reduce().
+	
+	
+Higher-Order Functions:
+		Higher-order functions take one or more functions as arguments and/or return a function as their result.
+		Examples include map(), filter(), and reduce(). They are used for more advanced functional programming techniques.
+		
+		
+		map() function:
+			The map() function applies a given function to each element of an iterable and returns an iterator that yields the results.
+			
+									numbers = [1, 2, 3, 4, 5]
+
+									squared_numbers = list(map(lambda x: x ** 2, numbers))
+									print("Squared Numbers:", squared_numbers)
+									# Output: Squared Numbers: [1, 4, 9, 16, 25]
+		filter() function:
+			The filter() function creates an iterator from elements of an iterable for which a given function returns True
+			
+									numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+									even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+									print("Even Numbers:", even_numbers)
+									# Output: Even Numbers: [2, 4, 6, 8, 10]
+		reduce() function:
+			The reduce() function applies a given function to the elements of an iterable in a cumulative way and returns a single value
+		
+									from functools import reduce
+
+									numbers = [1, 2, 3, 4, 5]
+
+									sum_of_numbers = reduce(lambda x, y: x + y, numbers)
+									print("Sum of Numbers:", sum_of_numbers)
+									# Output: Sum of Numbers: 15
+									
+					Note: Starting from Python 3, reduce() is no longer a built-in function. It is available in the functools module.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
+													Type of Arguments
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+								
+1)Positional Arguments: 
+		Positional arguments are passed to a function based on their position or order.
+		The values are assigned to the function parameters in the order they appear.
+		The number and order of arguments must match the function definition.
+
+		here the add_number take two arrgument and the calling function also as been given two arrgument 
+							def add_numbers(a, b):
+								return a + b
+
+							result = add_numbers(5, 3)
+							print("Result:", result)  # Output: Result: 8
+
+
+2)Keyword Arguments: 
+		Keyword arguments are passed to a function using the parameter name and the corresponding value.
+		They allow you to specify the value for specific parameters without relying on their position. 
+		Order is not important when using keyword arguments.
+
+		here the values and the parameters are given in the calling function
+						def calculate_area(length, width):
+							return length * width
+
+						area = calculate_area(length=5, width=3)
+						print("Area:", area)  # Output: Area: 15
+
+
+
+3)Default Arguments: 
+		Default arguments have default values specified in the function definition.
+		If an argument is not provided when calling the function, the default value is used. 
+		Default arguments allow for more flexibility and provide a fallback value if no argument is provided.
+		
+						def greet(name, message="Hello"):
+							return message + ", " + name + "!"
+
+						result1 = greet("Alice")
+						result2 = greet("Bob", message="Hi")
+
+						print(result1)  # Output: Hello, Alice!
+						print(result2)  # Output: Hi, Bob!
+
+
+4)Variable-Length Arguments:
+
+	1) *args (Non-Keyword Variable Arguments):
+		The *args syntax allows a function to accept any number of positional arguments. 
+		The function receives the arguments as a tuple and can iterate over them or access them using indexing.
+		
+		the function add_numbers accepts any number of positional arguments using *args. 
+		The arguments are passed as a tuple, and the function calculates their sum.
+							
+							def add_numbers(*args):
+								total = sum(args)
+								return total
+
+							result = add_numbers(1, 2, 3, 4, 5)
+							print("Result:", result)  # Output: Result: 15
+							
+
+	2) **kwargs (Keyword Variable Arguments): 
+		The **kwargs syntax allows a function to accept any number of keyword arguments.
+		The function receives the arguments as a dictionary, where the keys are the parameter names and the values are the corresponding arguments.
+								
+								def print_info(**kwargs):
+									for key, value in kwargs.items():
+										print(key + ": " + value)
+
+								print_info(name="Alice", age="25", city="New York")
+
+	
+5)Arbitrary Arguments: 
+		An arbitrary number of arguments can be passed to a function using a combination of positional and keyword arguments, along with *args and **kwargs.
+		This allows for more flexibility and adaptability when dealing with different argument scenarios.
+
+				1) Arbitrary Positional Arguments (*args):
+						def concatenate_strings(*args):
+							result = ""
+							for arg in args:
+								result += arg
+							return result
+
+						output = concatenate_strings("Hello", " ", "World", "!")
+						print(output)  # Output: Hello World!
+
+				2) Arbitrary Keyword Arguments (**kwargs):
+						def print_info(**kwargs):
+							for key, value in kwargs.items():
+								print(key + ": " + str(value))
+
+						print_info(name="Alice", age=25, city="New York")
+						
+----------------------------------------------------------------------------------------------------------------------------------------------------------						
+											Types of variable in Functions
+----------------------------------------------------------------------------------------------------------------------------------------------------------						
+	1)Local Variables: 
+				Local variables are variables defined within a function. They have local scope, meaning they are only accessible within the function. 
+				Local variables are created when the function is called and destroyed when the function execution completes.
+				
+									def my_function():
+										x = 10  # Local variable
+										print(x)
+
+									my_function()  # Output: 10
+									print(x)  # Error: NameError: name 'x' is not defined
+									
+	2) Global Variables: 
+				Global variables are defined outside of any function and can be accessed from any part of the program, including within functions.
+				To modify a global variable inside a function, you need to use the global keyword.
+				
+									x = 10  # Global variable
+
+									def my_function():
+										global x
+										x += 5
+										print(x)
+
+									my_function()  # Output: 15
+									print(x)  # Output: 15
+									
+	3)Parameters: 
+				Parameters are variables defined in the function header. 
+				They act as placeholders for values that will be passed to the function when it is called.
+				Parameters receive values from the arguments provided during the function call.
+				
+									def greet(name):
+										print("Hello, " + name + "!")
+
+									greet("Alice")  # Output: Hello, Alice!
+
+
+	4)Default Parameters: 
+				Default parameters have default values specified in the function definition.
+				If an argument is not provided for a default parameter during function call, the default value is used.
+						
+								def greet(name="Guest"):
+									print("Hello, " + name + "!")
+
+								greet("Alice")  # Output: Hello, Alice!
+								greet()  # Output: Hello, Guest!
+								
+	5)Nonlocal Variables: 
+				Nonlocal variables are used in nested functions. 
+				They are variables defined in the enclosing (outer) function and can be accessed and modified by the nested (inner) function.
+				
+				def outer_function():
+					x = 10  # Enclosing function variable
+					def inner_function():
+						nonlocal x
+						x += 5
+						print(x)
+					inner_function()  # Output: 15
+				outer_function()
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+																Exception handling
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Exception handling in Python allows you to handle and manage runtime errors and exceptional conditions that may occur during the execution of a program. 
+It helps you prevent your program from crashing and provides a way to gracefully handle errors. 
+
+Here are some key concepts and examples of exception handling in Python:
+
+1) Try-Except Block:
+		The try-except block is used to handle exceptions. Code that may raise an exception is placed inside the try block, and 
+		the corresponding exception handling code is written inside the except block.
+		
+		
+						try:
+							# Code that may raise an exception
+							result = 10 / 0
+						except ZeroDivisionError:
+							# Exception handling code
+							print("Error: Division by zero!")
+		In this example, the try block attempts to perform a division operation that may raise a ZeroDivisionError. 
+		If the exception occurs, the code inside the except block is executed, which prints an error message.
+
+2) Handling Multiple Exceptions:
+		You can handle multiple exceptions by specifying multiple except blocks.
+		
+						try:
+							# Code that may raise exceptions
+							file = open("nonexistent.txt", "r")
+							result = 10 / 0
+						except FileNotFoundError:
+							print("Error: File not found!")
+						except ZeroDivisionError:
+							print("Error: Division by zero!")
+							
+3) Handling All Exceptions:
+		You can use a general except block to handle all types of exceptions. 
+		However, it's generally recommended to handle specific exceptions whenever possible to provide more specific error messages.
+		
+						try:
+							# Code that may raise exceptions
+							result = 10 / 0
+						except Exception as e:
+							print("An error occurred:", str(e))
+							
+		In this example, the except Exception block handles any type of exception that occurs. 
+		The as keyword is used to assign the exception instance to a variable (e in this case), which can be used to display the error message.
+		
+4) Finally Block:
+		The finally block is used to specify code that should be executed regardless of whether an exception occurs or not.
+		It is commonly used to release resources or perform cleanup operations.
+						
+						try:
+							# Code that may raise an exception
+							file = open("data.txt", "r")
+							result = 10 / 2
+						except FileNotFoundError:
+							print("Error: File not found!")
+						finally:
+							# Code that always executes
+							if file:
+								file.close()
+								
+		Exception handling allows you to gracefully handle errors and control the flow of your program.
+		By using try-except blocks, you can catch and handle specific exceptions, provide custom error messages, 
+		and prevent your program from crashing due to unexpected errors.
+
+******************************************************************************************************
+	QUESTION AND ANSWER:
+******************************************************************************************************
+
+
+Q1. What is a function in Python?
+				A function in Python is a reusable block of code that performs a specific task.
+				It can take input arguments, perform operations, and return a result.
+
+Q2. How do you define a function in Python?
+				You can define a function in Python using the def keyword followed by the function name, parentheses for specifying arguments (if any),
+				and a colon. The function body is indented below the definition line.
+				
+				
+										def calculate_area(radius):
+												pi = 3.14159 
+												a = pi * radius ** 2
+												return a
+
+											area = calculate_area(5)
+											
+											print("Area:", area)  # Output: Area: 78.53975
+
+
+Q3. What is the purpose of the return statement in a function?
+				The return statement is used to specify the value that a function should return. 
+				It ends the function execution and returns the specified value or object.
+				
+				
+											def capitalize_string(string):
+												return string.capitalize()
+
+											result = capitalize_string("hello world")
+											print("Result:", result)  # Output: Result: Hello world
+
+Q4. Can a function return multiple values in Python?
+				Yes, a function in Python can return multiple values.
+				Multiple values can be returned as a tuple, list, or any other iterable.
+				
+							def get_circle_properties(radius):
+								pi = 3.14159
+								circumference = 2 * pi * radius
+								area = pi * radius ** 2
+								return circumference, area
+
+							circle_radius = 5
+							circumference, area = get_circle_properties(circle_radius)
+							print("Circumference:", circumference)  # Output: Circumference: 31.415
+							
+							
+							def get_student_info(name, age, grade):
+								student_info = {
+									"Name": name,
+									"Age": age,
+									"Grade": grade
+								}
+								return student_info
+
+							student_name = "Alice"
+							student_age = 15
+							student_grade = 9
+							result = get_student_info(student_name, student_age, student_grade)
+							print("Student Info:", result)  # Output: Student Info: {'Name': 'Alice', 'Age': 15, 'Grade': 9}
+
+				
+
+Q5. How do you call a function in Python?
+			To call a function, you simply write its name followed by parentheses. 
+			If the function takes arguments, you can pass them inside the parentheses.
+			
+			
+							def get_min_max(numbers):
+								minimum = min(numbers)
+								maximum = max(numbers)
+								return [minimum, maximum]
+
+							number_list = [5, 2, 8, 1, 9]
+		call function------->result = get_min_max(number_list)
+							print("Minimum:", result[0])  # Output: Minimum: 1
+							print("Maximum:", result[1])  # Output: Maximum: 9
+
+
+Q6. What is a docstring in Python?
+			A docstring is a string literal that provides documentation for a function, module, or class. 
+			It is used to describe the purpose and usage of the code.
+			
+
+Q7. How do you pass arguments to a function in Python?
+				Arguments can be passed to a function in Python by specifying them inside the parentheses when calling the function. 
+				The arguments can be positional or keyword arguments.
+				
+				
+							def calculate_area(length, width):
+								return length * width
+
+		pass arrgument-->	area = calculate_area(5, 3)
+							print("Area:", area)  # Output: Area: 15
+
+
+Q8. What are default arguments in Python functions?
+				Default arguments are arguments in a function that have a predefined value. If a value is not provided for a default argument,
+				the default value is used.
+				
+				
+						def greet(name, message="Hello"):
+							return message + ", " + name + "!"
+
+the o/p take default--> result1 = greet("Alice")
+						result2 = greet("Bob", message="Hi")
+
+						print(result1)  # Output: Hello, Alice!
+						print(result2)  # Output: Hi, Bob!
+
+
+Q9. Can you change the value of global variables inside a function?
+	Yes, you can change the value of global variables inside a function using the global keyword.
+	By using global, you can indicate that a variable refers to a global variable instead of a local variable.
+	
+	
+									x = 10  # Global variable
+
+									def my_function():
+										global x
+										x += 5
+										print(x)
+
+									my_function()  # Output: 15
+									print(x)  # Output: 15
+									
+
+Q10. What is a recursive function?
+		A recursive function is a function that calls itself during its execution.
+		It solves complex problems by breaking them down into smaller, simpler subproblems.
+		
+									def factorial(n):
+										if n == 0:
+											return 1
+										else:
+											return n * factorial(n - 1)
+
+									num = 5
+									result = factorial(num)
+									print("Factorial of", num, "is", result)  # Output: Factorial of 5 is 120
+
+
+Q11. How do you handle exceptions in Python functions?
+		Exceptions can be handled in Python functions using the try and except statements. 
+		The code that might raise an exception is placed in the try block, and any exception handling logic is written in the except block.
+		
+		
+
+Q12. What is the purpose of the pass statement in a function?
+		The pass statement is used as a placeholder when no action is required in a function block. 
+		It allows you to define empty or incomplete functions that can be filled in later.
+		
+						def placeholder_function():
+							pass
+
+						# Call the function
+						placeholder_function()
+
+
+
+Q13. Can you have a function inside another function in Python?
+
+		Yes, Python allows functions to be defined inside other functions. 
+		These are known as nested functions or inner functions.
+		
+					def outer_function(x):
+						print("Outer function")
+
+						def inner_function():
+							print("Inner function")
+							return 5
+
+						result = inner_function()
+						return x + result
+
+					# Call the outer function
+					output = outer_function(10)
+					print("Output:", output)
+
+
+Q14. What is the difference between local and global variables in Python?
+
+		--> Local variables are defined within a function and have local scope, meaning they are only accessible within that function. 
+		--> Global variables are defined outside of any function and can be accessed from any part of the program.
+
+
+Q15. How do you pass a function as an argument to another function?
+
+			In Python, you can pass a function as an argument to another function by using the function name without parentheses. 
+			This allows the receiving function to call the passed function.
+			
+								def greet():
+									print("Hello!")
+
+								def execute_function(func):
+									print("Executing the given function...")
+									func()
+
+								# Pass the greet function as an argument to execute_function
+								execute_function(greet)
+								
+
+Q16. What is a lambda function in Python?
+		A lambda function is an anonymous function defined using the lambda keyword.
+		It is a small, one-line function that can take any number of arguments but can only have one expression.
+		
+		
+					# Example 1: Add Two Numbers
+					add_numbers = lambda x, y: x + y
+
+					result = add_numbers(5, 3)
+					print("Result:", result)  # Output: Result: 8
+						----------------------------------------------
+					# Example 2: Square a Number
+					square_number = lambda x: x ** 2
+
+					result = square_number(4)
+					print("Result:", result)  # Output: Result: 16
+						---------------------------------------------
+					# Example 3: Check if a Number is Even
+					check_even = lambda x: x % 2 == 0
+
+					number = 7
+					is_even = check_even(number)
+					print(number, "is even?", is_even)  # Output: 7 is even? False
+
+
+Q17.what are the Scope of Variable:
+		Scope of a variable can be determined by the part in which variable is defined. 
+		Each variable cannot be accessed in each part of a program. There are two types of variables based on Scope:
+							1) Local Variable.
+							2) Global Variable.
+							
+Q18. What is the purpose of the map() function in Python?
+			The map() function in Python is used to apply a given function to each item of an iterable and returns an iterator of the results.
+			
+							# Example 1: Square Numbers
+							numbers = [1, 2, 3, 4, 5]
+
+							squared_numbers = list(map(lambda x: x ** 2, numbers))
+							print("Squared Numbers:", squared_numbers)
+							# Output: Squared Numbers: [1, 4, 9, 16, 25]
+								-----------------------------------------------
+							# Example 2: Convert Temperatures
+							temperatures = [25, 30, 15, 20, 35]
+
+							converted_temperatures = list(map(lambda x: (x * 9/5) + 32, temperatures))
+							print("Converted Temperatures:", converted_temperatures)
+							# Output: Converted Temperatures: [77.0, 86.0, 59.0, 68.0, 95.0]
+
+
+Q19. What is a closure in Python?
+			A closure in Python is a function object that has access to variables in its own scope, as well as variables in the scope of the enclosing function.
+			In Python, a closure is a function object that remembers values in the enclosing lexical scope, even if they are not present in memory. 
+			It means the closure function has access to variables from the outer (enclosing) function's scope,
+			even after the outer function has finished executing
+			
+			
+							def outer_function(x):
+								def inner_function(y):
+									return x + y
+								return inner_function
+
+							closure_func = outer_function(10)
+							result = closure_func(5)
+							print("Result:", result)  # Output: Result: 15
+
+Q20. What is a decorator in Python?
+			A decorator in Python is a design pattern that allows modifying the behavior of a function or class without changing its source code.
+			It is implemented using the @ symbol.
+
+Q21. How do you define a generator function in Python?
+			A generator function in Python is defined using the yield keyword instead of return.
+			It returns an iterator that can be iterated over to produce a sequence of values.
+
+Q22. What is the purpose of the zip() function in Python?
+				The zip() function in Python is used to combine elements from multiple iterables into tuples.
+				It returns an iterator that generates tuples containing elements from each iterable.
+								The zip() function in Python is used to combine elements from multiple iterables into a single iterable of tuples.
+								It takes iterables as input and returns an iterator that generates tuples
+								where each tuple contains elements from the input iterables at corresponding positions.
+								
+								zip(*iterables)
+									numbers = [1, 2, 3]
+									letters = ['a', 'b', 'c']
+									symbols = ['!', '@', '#']
+
+									result = list(zip(numbers, letters, symbols))
+									print(result)    #[(1, 'a', '!'), (2, 'b', '@'), (3, 'c', '#')]
+									
+							if the length of the zip function is not equal the unequal element will be ignored 
+
+
+								
+								
+Q23. What is recursion depth in Python?
+			Recursion depth refers to the number of times a recursive function calls itself.
+			It determines how many nested levels of function calls can be made before reaching the maximum recursion depth
+			
+			
+			
+Q24. How do you define a generator expression in Python?
+				A generator expression in Python is similar to a list comprehension, but it returns an iterator instead of a list.
+				It is defined using parentheses instead
+					
+					A generator expression in Python is a concise way to create an iterator. 
+					It allows you to define a generator using a compact and readable syntax.
+					Generator expressions are similar to list comprehensions, but they create a generator object that produces values on-the-fly,
+					rather than constructing a list in memory.
+					
+					syntax :  (expression for item in iterable if condition)
+				
+				
+									numbers = [1, 2, 3, 4, 5]
+
+									# Generator expression that yields the squares of the numbers
+									squared_numbers = (num ** 2 for num in numbers)
+
+									# Iterate over the generator and print the squared numbers
+									for squared_num in squared_numbers:
+										print(squared_num)
+
+Q25.Difference between Normal Functions and Anonymous Function:
+
+			Normal functions and anonymous functions (also known as lambda functions) in Python have some key differences in their syntax, usage, and behavior.
+			Here's a comparison between the two:
+
+	1) Normal Functions:
+
+		Syntax: Normal functions are defined using the def keyword, followed by the function name, parentheses for optional parameters,
+				and a colon to start the function block.
+		Name: Normal functions have a defined name, which is used to call the function later.
+		Structure: Normal functions can have multiple statements, including a return statement, and can contain multiple lines of code.
+		Reusability: Normal functions are reusable and can be called multiple times throughout the program.
+		Function Objects: Normal functions are full-fledged objects in Python, and you can assign them to variables, pass them as arguments,
+						and return them as values.
+
+	2) Anonymous Functions (Lambda Functions):
+
+		Syntax: Anonymous functions are defined using the lambda keyword, followed by the parameters, a colon :, and the expression to be evaluated.
+		Nameless: Anonymous functions do not have a name, so they are also called nameless functions.
+		Simplicity: Lambda functions are typically used for simple, one-line functions, where creating a full function definition is not necessary.
+		Conciseness: Lambda functions provide a more concise syntax compared to normal functions.
+		Single Expression: Lambda functions can only contain a single expression, which is implicitly returned as the result of the function.
+		Limited Statements: Lambda functions cannot include multiple statements or complex logic like normal functions.
+		Function Objects: Lambda functions are also function objects in Python, which means they can be assigned to variables, passed as arguments, 
+							and returned as values, similar to normal functions
+							
+Q26) what are the main Passing Arguments:
+		Apart from matching the parameters, there are other ways of matching the parameters.
+		Python supports following types of formal argument:
+		1) Positional argument (Required argument).
+		2) Default argument.
+		3) Keyword argument (Named argument)
