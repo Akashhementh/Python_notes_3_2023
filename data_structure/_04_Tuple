@@ -1,0 +1,261 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+  iv. Tuple:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+										
+		  1. What is use of Tuple. Explain different use cases of Tuple
+			     ====>Tuples are also same as list are used to store data of variable type in single type.
+				      Tuples are an immutable data structure in Python, meaning their elements cannot be modified once created
+
+
+				    use cases:--
+				 =================
+				   1.Sequence packing and unpacking: Tuples are often used for efficient packing and unpacking of multiple values.
+
+				   2.Multiple return values: Functions can return multiple values as a tuple.
+
+				   3.Immutable data storage: Tuples are useful when you want to store data that shouldn't be modified,
+					 such as  constant values,configuration settings.
+
+				   4.Dictionary keys: Tuples can be used as keys in dictionaries because they are immutable
+
+				   5.Function arguments and parameters: Tuples can be used to pass multiple arguments to a function or receive multiple parameters.
+
+
+				   6.Iterating over multiple sequences: Tuples can be used to group related data together.
+
+
+				   7.Database operations: Tuples are commonly used to fetch and store records from databases.
+
+				   8.Tuples provide immutability and order-preserving properties,
+						   making them suitable to store and manipulate data that should not be modified.
+
+			2. Sequence operations on Tuple:
+			  
+												  Sequence operations
+												----------------------
+									    1. Indexing ==== RETRIEVAL
+											   print("Indexing : ", tup1[2])
+
+									    2. Slicing
+											   print("Slicing : ", tup1[0:2])
+
+									    3. Adding
+
+												t1 = (1, 2, 3)
+												t2 = (4, 5, 6)
+												print("Tuple1 : ", t1)
+												print("Adding : ", t1 + t2)  # One time usage  (1,2,3,4,5,6)
+												t1 = t1 + t2
+												print("Tuple1 : ", t1)   # 2 or more times
+
+												print(10)
+
+
+
+									    4. Multiplying
+
+												 t1 = (1, 2, 3)
+													   print("Mulitiply : ", t1*3)
+
+										5. Membership
+													t1 = (1, 2, 3, 4)
+													print("Membership : ", 1 in t1)
+													print("Length : ", len(t1))
+													print("Max : ", max(t1))
+													print("Min : ", min(t1))
+
+										6.len() :    t1 = (1, 2, 3, 4)
+															 print("Length : ", len(t1))
+
+										7.max():         print("Max : ", max(t1))
+
+										8.min():         print("Min : ", min(t1))
+
+
+
+			3. Characteristics(Properties) of Tuple:
+			      
+      				1.Immutable: Tuples are immutable, meaning their elements cannot be changed once the tuple is created.
+
+					2.Ordered: Tuples are ordered collections, which means the elements within a tuple have a specific order.
+
+					3.Heterogeneous: Tuples can store elements of different data types. For example, a tuple can contain a combination of integers, floats, strings, or even other tuples.
+
+
+					4.Indexed: Elements within a tuple are accessed using index values. The index starts from 0 for the first element and increments by 1 for each subsequent element.
+
+
+					5.Iterable: Tuples are iterable, meaning you can loop over the elements of a tuple using loops
+
+					6.Compact and Lightweight: Tuples are memory-efficient as they require less space compared to lists.
+
+
+			4. CRUD operations on Tuple:
+		           I. Create a Tuple:
+					  It can create a tuple by enclosing comma-separated values within parentheses.
+										  my_tuple = (1, 2, 3)
+
+				   II.Read from a Tuple:
+					  It  can access elements of a tuple using indexing or slicing.
+
+										  my_tuple = (1, 2, 3)
+											   print(my_tuple[0])
+											   ---- Output: 1
+												print(my_tuple[1:])
+											   --- Output: (2, 3)
+
+				   III. Update/Modify a Tuple (Indirectly):
+					   tuples are immutable, you cannot directly update or modify elements within a tuple.
+					  However, you can create a new tuple by concatenating or slicing existing tuples.
+
+									   my_tuple = (1, 2, 3)
+									   updated_tuple = my_tuple + (4,)
+												 print(updated_tuple)
+												--- Output: (1, 2, 3, 4)
+
+				   IV. Delete a Tuple (Indirectly):
+					   It cannot delete individual elements from a tuple since tuples are immutable.
+							However, you can delete the entire tuple using the del statement.
+
+								  my_tuple = (1, 2, 3)
+								  del my_tuple
+						   # The tuple no longer exists after deletion
+
+
+			5. Memory allocation of Tuple:
+			     1.Memory Efficiency: Tuples are generally more memory-efficient compared to lists.
+									  This is because tuples are immutable.
+				 2.Contiguous Memory Allocation: Tuples are stored in contiguous memory blocks.
+												 Each element within the tuple occupies a fixed amount of memory based on its data type.
+				 3.Overhead: Tuples have a small memory overhead due to the tuple object itself,
+							 which stores metadata such as the length of the tuple and
+							 a reference to the memory location of the elements
+				 4.Memory Usage with Different Data Types: The memory usage of a tuple can vary depending
+					                                       on the data types of its elements.
+					                                        For example, tuples with integer or floating-point numbers require a fixed amount of memory per element,
+						                                    whereas tuples with variable-length strings or objects may require additional memory
+						                                    for storing the references to those objects.
+				 5.Sharing Memory: Tuples in Python can share memory with other objects.
+						           When multiple tuples have identical elements.
+
+
+
+
+			6. Write all possible combinations of Tuple structure(homo,hetero with all data types, data structures)
+			
+						1.Homogeneous Tuple with Numeric Data:
+
+										   num_tuple = (1, 2, 3, 4, 5)
+
+						2.Homogeneous Tuple with Strings:
+
+									  str_tuple = ("apple", "banana", "cherry", "date")
+
+					    3.Homogeneous Tuple with Boolean Values:
+
+								   bool_tuple = (True, False, True, True)
+
+					    4.Homogeneous Tuple with None:
+
+									   none_tuple = (None, None, None)
+					    5.Homogeneous Tuple with Tuples:
+
+									  tuple_tuple = ((1, 2), (3, 4), (5, 6))
+					    6.Heterogeneous Tuple with Mixed Data Types:
+
+									   mixed_tuple = ("apple", 2, True, 4.5)
+					    7.Heterogeneous Tuple with Lists:
+
+									  list_tuple = ([1, 2, 3], ["a", "b", "c"], [True, False])
+					    8.Heterogeneous Tuple with Dictionaries:
+
+										dict_tuple = ({"name": "John", "age": 30}, {"name": "Alice", "age": 25})
+					    9.Heterogeneous Tuple with Sets:
+
+										set_tuple = ({1, 2, 3}, {4, 5, 6})
+
+
+
+			7. Explain about each function of Tuple:
+			
+								 1. index(): Returns the index of the first occurrence of a specified value in the tuple.
+
+									   my_tuple = (1, 2, 3, 2, 4, 2)
+									   index = my_tuple.index(2)
+												   print(index)
+												---- Output: 1
+												
+								 2. count(): Returns the number of occurrences of a specified value in the tuple.
+
+										my_tuple = (1, 2, 3, 2, 4, 2)
+										count = my_tuple.count(2)
+												print(count)
+									  --- Output: 3
+
+								 3. sorted(): Returns a new tuple with the elements sorted in ascending order.
+
+											my_tuple = (3, 1, 4, 2, 5)
+											sorted_tuple = tuple(sorted(my_tuple))
+													print(sorted_tuple)
+												   ----Output: (1, 2, 3, 4, 5)
+
+								 4. max(): Returns the maximum value in a tuple.
+
+													my_tuple = (10, 20, 5, 30)
+													maximum = max(my_tuple)
+															print(maximum)
+														  --- Output: 30
+								 5. min(): Returns the minimum value in a tuple.
+
+												   my_tuple = (10, 20, 5, 30)
+												   minimum = min(my_tuple)
+															print(minimum)
+														 ----- Output: 5
+
+			8. shallow copy vs deep copy in tuple:
+			    Shallow Copy:
+					In tuples, a shallow copy creates a new tuple that references the same elements as the original tuple.
+					Since tuples are immutable, the elements cannot be modified, so the shallow copy behaves essentially
+					like a reference to the original tuple.
+											   original_tuple = (1, [2, 3])
+											   shallow_copy = original_tuple
+
+												original_tuple[1].append(4)
+
+															 print(original_tuple)
+													  ----Output: (1, [2, 3, 4])
+															 print(shallow_copy)
+													  -----Output: (1, [2, 3, 4])
+
+				deep copy:
+					  Deep Copy:
+							In deep copy is typically used to create independent copies of mutable objects,
+							it is not necessary for tuples since they are immutable.
+							Since you cannot modify the elements of a tuple, creating a deep copy of a tuple
+							essentially results in the same tuple.
+
+								  Example:
+
+										original_tuple = (1, [2, 3])
+										deep_copy = copy.deepcopy(original_tuple)
+
+										original_tuple[1].append(4)
+
+										print(original_tuple)
+									 ---- Output: (1, [2, 3, 4])
+										print(deep_copy)
+									 ---- Output: (1, [2, 3])
+
+
+			9. list vs tuple ( Min. 4 differences in detail):
+
+										  list                                                            TUPLE
+							1	Lists are mutable	                                            1.Tuples are immutable
+							2	The implication of iterations is Time-consuming	                2.The implication of iterations is comparatively Faster
+							3	The list is better for performing operations,                   3.A Tuple data type is appropriate for accessing the elements
+								 such as insertion and deletion.
+							4	Lists consume more memory	                                    4.Tuple consumes less memory as compared to the list
+							5	Lists have 10 built-in methods	                                5.Tuple have 2 built-in methods.
+							6	Unexpected changes and errors are more likely to occur 	        6.In a tuple, it is hard to take place.
+						
+						
